@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal — REBREW</title>
+  <meta name="description" content="The ReBrew Journal. Stories about fermentation, craft, lifestyle and the people behind the brew.">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">The Journal</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer"><div class="cart-total"><span>Total</span><strong>₹0</strong></div><a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;">Checkout</a></div>
+</aside>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="shop.html">Shop</a></li><li><a href="events.html">Events</a></li><li><a href="blog.html" class="active">Journal</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="#" class="nav-cart-btn" data-open-cart>Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html" class="active" aria-current="page">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<section class="page-hero" style="background:linear-gradient(160deg,var(--ink) 0%,#2a1a0a 100%);">
+  <div class="container"><div class="page-hero-content">
+    <p class="eyebrow" style="color:var(--dusty-gold);margin-bottom:12px">Stories & Craft</p>
+    <h1 class="headline-xl" style="color:var(--cream)">The<br>Journal.</h1>
+    <p style="font-family:var(--font-fell);font-style:italic;color:rgba(245,237,214,0.5);font-size:18px;margin-top:12px">"Words from the brewery."</p>
+  </div></div>
+</section>
+
+<section class="blog-page bg-cream">
+  <div class="container">
+    <!-- Categories -->
+    <div class="blog-categories reveal">
+      <button class="blog-cat active">All</button>
+      <button class="blog-cat">Fermentation</button>
+      <button class="blog-cat">Behind the Brew</button>
+      <button class="blog-cat">Lifestyle</button>
+      <button class="blog-cat">Health</button>
+      <button class="blog-cat">Recipes</button>
+    </div>
+
+    <!-- Featured Post -->
+    <div class="blog-featured reveal">
+      <div class="blog-featured-img">
+        <img src="assets/images/bottles-dramatic.png" alt="Why Fermented Drinks Hit Different" loading="lazy">
+        <span class="blog-featured-badge">Featured</span>
+      </div>
+      <div class="blog-featured-text">
+        <p class="eyebrow">Fermentation</p>
+        <h2 class="blog-featured-title">Why Fermented Drinks Actually Hit Different</h2>
+        <p class="blog-meta">May 15, 2025 · 6 min read</p>
+        <p class="blog-featured-excerpt">There's a reason fermented foods and drinks have been part of human culture for thousands of years. It's not just tradition — it's biology. Here's what actually happens inside a ReBrew bottle.</p>
+        <a href="#" class="btn btn-dark">Read Article →</a>
+      </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid stagger-children">
+
+      <a href="#" class="blog-card">
+        <div class="blog-card-image"><img src="assets/images/label-closeup.png" alt="The Label Story" loading="lazy"></div>
+        <p class="blog-card-cat">Behind the Brew</p>
+        <h3 class="blog-card-title">The Story Behind the ReBrew Label Design</h3>
+        <p class="blog-card-excerpt">Every element of the ReBrew label was deliberate — from the circular badge to the phrase "Every bottle has its own story." Here's how it came together.</p>
+        <p class="blog-card-meta">April 28, 2025 · 4 min read</p>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="blog-card-image"><img src="assets/images/founder.png" alt="Founder Interview" loading="lazy"></div>
+        <p class="blog-card-cat">Behind the Brew</p>
+        <h3 class="blog-card-title">From Kitchen Experiments to Café Shelves</h3>
+        <p class="blog-card-excerpt">An honest look at what it takes to start a craft beverage brand from scratch — the failures, the pivots, and the first successful batch.</p>
+        <p class="blog-card-meta">April 10, 2025 · 8 min read</p>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="blog-card-image"><img src="assets/images/pineapple-bottle.png" alt="Pairing Guide" loading="lazy"></div>
+        <p class="blog-card-cat">Lifestyle</p>
+        <h3 class="blog-card-title">The ReBrew Food Pairing Guide</h3>
+        <p class="blog-card-excerpt">Which ReBrew flavour goes best with biryani? What about a cheese board? Our unofficial (but thoroughly tested) pairing guide.</p>
+        <p class="blog-card-meta">March 22, 2025 · 5 min read</p>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="blog-card-image"><img src="assets/images/brand-grid.png" alt="Fermentation Science" loading="lazy"></div>
+        <p class="blog-card-cat">Health</p>
+        <h3 class="blog-card-title">Is Fermented Fruit Soda Actually Good for You?</h3>
+        <p class="blog-card-excerpt">We dig into the science behind natural fermentation, live cultures, and what it means when we say a drink is "bottled alive."</p>
+        <p class="blog-card-meta">March 8, 2025 · 7 min read</p>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="blog-card-image"><img src="assets/images/bottles-scattered.png" alt="Cocktail Mocktail" loading="lazy"></div>
+        <p class="blog-card-cat">Recipes</p>
+        <h3 class="blog-card-title">5 Mocktail Recipes Using ReBrew</h3>
+        <p class="blog-card-excerpt">ReBrew isn't just a sip-straight drink. Mix it, layer it, garnish it. Five creative recipes that elevate each flavour into something extraordinary.</p>
+        <p class="blog-card-meta">February 14, 2025 · 3 min read</p>
+      </a>
+
+      <a href="#" class="blog-card">
+        <div class="blog-card-image"><img src="assets/images/bottles-lineup.png" alt="Zero Alcohol Movement" loading="lazy"></div>
+        <p class="blog-card-cat">Lifestyle</p>
+        <h3 class="blog-card-title">The Rise of the Zero-Alcohol Generation</h3>
+        <p class="blog-card-excerpt">Gen Z is drinking less alcohol than any generation before them — and they're not replacing it with soda. Here's what they're reaching for instead.</p>
+        <p class="blog-card-meta">January 30, 2025 · 6 min read</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-section" style="background:var(--aged-paper);">
+  <div class="container">
+    <div class="newsletter-inner reveal">
+      <p class="eyebrow" style="text-align:center">Never Miss a Story</p>
+      <h2 class="headline-lg">Subscribe to<br>the Journal.</h2>
+      <p>New articles, brew notes, and behind-the-scenes stories — straight to your inbox.</p>
+      <form class="newsletter-form" novalidate>
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
+
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+<script>
+document.querySelectorAll('.blog-cat').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.blog-cat').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

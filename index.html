@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REBREW — Every Bottle Has Its Own Story</title>
+  <meta name="description" content="ReBrew is a premium non-alcoholic fermented fruit soda. Handcrafted in small batches. Brewed once. Born again.">
+  <meta name="keywords" content="rebrew, fermented fruit soda, non-alcoholic, handcrafted, craft beverage, india">
+  <meta property="og:title" content="REBREW — Every Bottle Has Its Own Story">
+  <meta property="og:description" content="Premium non-alcoholic fermented fruit soda. Handcrafted. Naturally fermented. Brewed once.">
+  <meta property="og:image" content="assets/images/brand-grid.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Film Grain -->
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+
+<!-- Loading Screen -->
+<div id="loader" role="status" aria-label="Loading">
+  <img src="assets/logos/rebrew-logo.png" alt="ReBrew Logo" class="loader-logo">
+  <p class="loader-text">Brewed Once. Born Again.</p>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Cart Overlay -->
+<div class="cart-overlay" aria-hidden="true"></div>
+
+<!-- Cart Drawer -->
+<aside class="cart-drawer" aria-label="Shopping Cart">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button class="cart-close" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong>₹0</strong>
+    </div>
+    <a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;">
+      Checkout
+    </a>
+    <a href="cart.html" class="btn btn-dark" style="width:100%;justify-content:center;font-size:11px;">
+      View Full Cart
+    </a>
+  </div>
+</aside>
+
+<!-- Navigation -->
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo" aria-label="ReBrew Home">
+    <img src="assets/logos/rebrew-logo.png" alt="ReBrew Logo">
+    <span class="nav-logo-text">REBREW</span>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="blog.html">Journal</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li>
+      <a href="#" class="nav-cart-btn" data-open-cart aria-label="Open cart">
+        Cart <span class="cart-count" aria-live="polite" style="display:none">0</span>
+      </a>
+    </li>
+  </ul>
+
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html" class="active" aria-current="page">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <!-- Text -->
+    <div class="hero-text">
+      <div class="hero-estd">
+        <span class="scramble-text">ESTD 2025</span>
+      </div>
+
+      <h1 class="hero-title">
+        REBREW</span>
+      </h1>
+
+      <p class="hero-tagline">Brewed. Bottled. Wrapped.</p>
+
+      <blockquote class="hero-quote">
+        "Every bottle has its own story."
+      </blockquote>
+
+      <div class="hero-actions">
+        <a href="shop.html" class="btn btn-primary magnetic">
+          Shop Now →
+        </a>
+        <a href="about.html" class="btn btn-outline">
+          Explore Story
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottle Visual -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-bottle-showcase">
+        <div class="hero-glow"></div>
+
+        <div class="hero-bottle-accent left">
+          <img src="assets/images/bottles-lineup.png" alt="ReBrew bottle collection">
+        </div>
+
+        <div class="hero-bottle-main">
+          <img src="assets/images/pineapple-bottle.png" alt="ReBrew Pineapple Brew">
+        </div>
+
+        <div class="hero-bottle-accent right">
+          <img src="assets/images/bottles-dramatic.png" alt="ReBrew bottles">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="hero-scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     BRAND STRIP
+══════════════════════════════════════════════════ -->
+<div class="brand-strip" aria-hidden="true">
+  <div class="brand-strip-inner">
+    <span class="brand-strip-item">Naturally Fermented</span>
+    <span class="brand-strip-item">Non-Alcoholic</span>
+    <span class="brand-strip-item">Small Batch</span>
+    <span class="brand-strip-item">Bottled Alive</span>
+    <span class="brand-strip-item">No Preservatives</span>
+    <span class="brand-strip-item">Handcrafted</span>
+    <span class="brand-strip-item">Time Makes It Wild</span>
+    <span class="brand-strip-item">Brewed Once</span>
+    <!-- Duplicated for seamless loop -->
+    <span class="brand-strip-item">Naturally Fermented</span>
+    <span class="brand-strip-item">Non-Alcoholic</span>
+    <span class="brand-strip-item">Small Batch</span>
+    <span class="brand-strip-item">Bottled Alive</span>
+    <span class="brand-strip-item">No Preservatives</span>
+    <span class="brand-strip-item">Handcrafted</span>
+    <span class="brand-strip-item">Time Makes It Wild</span>
+    <span class="brand-strip-item">Brewed Once</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     ABOUT INTRO
+══════════════════════════════════════════════════ -->
+<section class="about-intro" id="about-intro">
+  <div class="container">
+    <div class="about-intro-grid">
+      <div class="about-intro-image reveal-left">
+        <img src="assets/images/bottles-scattered.png"
+             alt="ReBrew bottles with handcrafted labels"
+             loading="lazy">
+        <div class="about-intro-badge">
+          <img src="assets/logos/rebrew-logo.png" alt="ReBrew Brewed Once Born Again badge">
+        </div>
+      </div>
+
+      <div class="about-intro-text reveal">
+        <p class="eyebrow">What is ReBrew?</p>
+        <h2 class="headline-lg">Fermented<br>Hits Different.</h2>
+        <div class="divider"></div>
+        <p class="body-lg">
+          ReBrew is a handcrafted fermented fruit soda — naturally carbonated, zero alcohol, and bottled alive. Each batch is brewed slow, with real fruit, real time, and real intention.
+        </p>
+        <p style="font-family:var(--font-body);font-size:15px;line-height:1.75;color:var(--vintage-brown);margin-top:20px;">
+          Not another soft drink. Not a health gimmick. ReBrew is a different kind of drinking experience — one with depth, complexity, and character. The kind of thing you open, smell, and actually think about.
+        </p>
+        <a href="about.html" class="btn btn-dark" style="margin-top:36px;">
+          Our Story →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FEATURED PRODUCTS
+══════════════════════════════════════════════════ -->
+<section class="featured-products" id="products">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">The Collection</p>
+      <h2 class="headline-lg">Five Brews.<br>One Character.</h2>
+    </div>
+
+    <div class="products-grid stagger-children">
+      <!-- Grape -->
+      <a href="products.html" class="product-card">
+        <div class="product-card-image">
+          <img src="assets/images/bottles-lineup.png" alt="ReBrew Grape" loading="lazy">
+        </div>
+        <div class="product-flavor-dot flavor-grape"></div>
+        <h3 class="product-card-name">Grape</h3>
+        <p class="product-card-sub">Fermented · 275ml</p>
+        <p class="product-card-note">"Deep, tangy, wild with character"</p>
+        <p class="product-card-price">110</p>
+        <button class="btn btn-primary" data-add-to-cart="grape">Add to Cart</button>
+      </a>
+
+      <!-- Apple & Cinnamon -->
+      <a href="products.html" class="product-card">
+        <div class="product-card-image">
+          <img src="assets/images/bottles-lineup.png" alt="ReBrew Apple & Cinnamon" loading="lazy">
+        </div>
+        <div class="product-flavor-dot flavor-apple"></div>
+        <h3 class="product-card-name">Apple & Cinnamon</h3>
+        <p class="product-card-sub">Fermented · 275ml</p>
+        <p class="product-card-note">"Warm orchard, spiced to perfection"</p>
+        <p class="product-card-price">₹110</p>
+        <button class="btn btn-primary" data-add-to-cart="apple_cinnamon">Add to Cart</button>
+      </a>
+
+      <!-- Ginger -->
+      <a href="products.html" class="product-card">
+        <div class="product-card-image">
+          <img src="assets/images/pineapple-bottle.png" alt="ReBrew Ginger" loading="lazy">
+        </div>
+        <div class="product-flavor-dot flavor-ginger"></div>
+        <h3 class="product-card-name">Ginger</h3>
+        <p class="product-card-sub">Fermented · 275ml</p>
+        <p class="product-card-note">"Sharp, fiery, clean finish"</p>
+        <p class="product-card-price">₹110</p>
+        <button class="btn btn-primary" data-add-to-cart="ginger">Add to Cart</button>
+      </a>
+
+      <!-- Pineapple -->
+      <a href="products.html" class="product-card">
+        <div class="product-card-image">
+          <img src="assets/images/pineapple-bottle.png" alt="ReBrew Pineapple" loading="lazy">
+        </div>
+        <div class="product-flavor-dot flavor-pineapple"></div>
+        <h3 class="product-card-name">Pineapple</h3>
+        <p class="product-card-sub">Fermented · 275ml</p>
+        <p class="product-card-note">"Tropical, effervescent, alive"</p>
+        <p class="product-card-price">₹110</p>
+        <button class="btn btn-primary" data-add-to-cart="pineapple">Add to Cart</button>
+      </a>
+
+      <!-- Mint -->
+      <a href="products.html" class="product-card">
+        <div class="product-card-image">
+          <img src="assets/images/bottles-lineup.png" alt="ReBrew Mint" loading="lazy">
+        </div>
+        <div class="product-flavor-dot flavor-mint"></div>
+        <h3 class="product-card-name">Mint</h3>
+        <p class="product-card-sub">Fermented · 275ml</p>
+        <p class="product-card-note">"Cool, crisp, herbal depth"</p>
+        <p class="product-card-price">₹110</p>
+        <button class="btn btn-primary" data-add-to-cart="mint">Add to Cart</button>
+      </a>
+    </div>
+
+    <div class="text-center" style="margin-top:52px">
+      <a href="shop.html" class="btn btn-outline">View All Products →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FOUNDER STORY
+══════════════════════════════════════════════════ -->
+<section class="founder-story" id="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-image-wrap reveal-left">
+        <div class="founder-image-frame">
+          <img src="assets/images/founder.png" alt="ReBrew Founder" loading="lazy">
+          <div class="founder-image-caption">
+            <p>"Time makes it wild." — The ReBrew Philosophy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="founder-text reveal">
+        <p class="eyebrow">The Founder</p>
+        <h2 class="headline-lg">Started from<br>Curiosity.</h2>
+        <div class="divider"></div>
+
+        <blockquote class="founder-pull-quote">
+          "ReBrew started from curiosity more than a business plan."
+        </blockquote>
+
+        <div class="founder-story-text">
+          <p>
+            I always wanted to create something that felt <strong>different from regular soft drinks</strong> — something with more character, more depth, and more of a story behind it.
+          </p>
+          <p>
+            What began as small experiments with fruits, fermentation, and flavour combinations slowly turned into an <strong>obsession with building a unique beverage experience</strong>.
+          </p>
+          <p>
+            The early days were filled with trial batches, failed experiments, recipe changes, and learning how fermentation behaves over time. Every bottle taught something new.
+          </p>
+          <p>
+            Instead of creating another sugary soda, the goal was to build a handcrafted fruit brew that felt <strong>refreshing, naturally alive, and slightly different every time</strong> you opened it.
+          </p>
+        </div>
+
+        <a href="about.html" class="btn btn-dark" style="margin-top:36px;">
+          Read Full Story →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FERMENTATION PROCESS
+══════════════════════════════════════════════════ -->
+<section class="process-section" id="process">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow" style="color:rgba(245,237,214,0.5)">How It's Made</p>
+      <h2 class="headline-lg" style="color:var(--cream)">The Brew<br>Process.</h2>
+    </div>
+
+    <div class="process-steps stagger-children">
+      <div class="process-step">
+        <div class="process-number">01</div>
+        <div class="process-icon">🍑</div>
+        <h3 class="process-step-title">Source Real Fruit</h3>
+        <p class="process-step-text">Every batch starts with fresh, real fruit. No concentrates. No artificial flavours. Just fruit in its natural state.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-number">02</div>
+        <div class="process-icon">🧫</div>
+        <h3 class="process-step-title">Ferment Slowly</h3>
+        <p class="process-step-text">We let nature do the work. The fermentation process takes time — and time is what gives each brew its wild, alive character.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-number">03</div>
+        <div class="process-icon">🫙</div>
+        <h3 class="process-step-title">Bottle Alive</h3>
+        <p class="process-step-text">Each bottle is sealed at the peak of fermentation, capturing natural carbonation and live cultures inside every bottle.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-number">04</div>
+        <div class="process-icon">✦</div>
+        <h3 class="process-step-title">Crafted to Sip</h3>
+        <p class="process-step-text">No shortcuts. No mass production. Every label is a product of the same curiosity that started this whole journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     WHY REBREW
+══════════════════════════════════════════════════ -->
+<section class="why-rebrew" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <p class="eyebrow reveal">Why ReBrew?</p>
+        <h2 class="headline-lg reveal">Good For You.<br>Good For The Planet.</h2>
+        <div class="divider reveal"></div>
+
+        <div class="why-points stagger-children">
+          <div class="why-point">
+            <div class="why-point-icon">🌿</div>
+            <div class="why-point-content">
+              <h4>Zero Alcohol</h4>
+              <p>All the celebration, none of the side effects. ReBrew is your premium drinking alternative.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">🧃</div>
+            <div class="why-point-content">
+              <h4>Real Ingredients Only</h4>
+              <p>No artificial sweeteners, no preservatives, no shortcuts. Every ingredient is sourced with intention.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">✨</div>
+            <div class="why-point-content">
+              <h4>Naturally Carbonated</h4>
+              <p>The fizz you feel is alive. Natural fermentation creates carbonation you won't find in any factory soda.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="why-point-icon">🏺</div>
+            <div class="why-point-content">
+              <h4>Small Batch Crafted</h4>
+              <p>Limited production means more care in every bottle. Every batch is supervised, adjusted, and tasted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-visual reveal-right">
+        <div class="why-visual-mosaic">
+          <div class="mosaic-item">
+            <img src="assets/images/bottles-dramatic.png" alt="ReBrew dramatic shot" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="assets/images/label-closeup.png" alt="ReBrew label closeup" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="assets/images/pineapple-bottle.png" alt="ReBrew Pineapple" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     REVIEWS
+══════════════════════════════════════════════════ -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow" style="color:rgba(245,237,214,0.45)">What People Say</p>
+      <h2 class="headline-lg" style="color:var(--cream)">Real Sips.<br>Real Stories.</h2>
+    </div>
+
+    <div class="reviews-grid stagger-children">
+      <div class="review-card">
+        <div class="review-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="review-text">"I picked up the Ginger brew at a café and couldn't believe it had zero alcohol. The fermentation gives it this alive, fizzy quality that no regular soda has."</p>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div class="review-author-info">
+            <h5>Arjun S.</h5>
+            <span>Café Customer, Coimbatore</span>
+          </div>
+        </div>
+      </div>
+
+      
+
+    <div class="text-center" style="margin-top:52px">
+      <a href="reviews.html" class="btn btn-outline">Read All Reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     PAST EVENTS
+══════════════════════════════════════════════════ -->
+<section class="events-section" id="events">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <p class="eyebrow">Where We've Been</p>
+      <h2 class="headline-lg">Past<br>Events.</h2>
+    </div>
+
+    <div class="events-list stagger-children">
+
+      <a href="events.html" class="event-item">
+        <div class="event-date">
+          <div class="event-date-day">16</div>
+          <div class="event-date-month">Dec 2025</div>
+        </div>
+
+        <div class="event-info">
+          <h3>Supper Club × ReBrew</h3>
+          <p>Saravanampatti, Coimbatore · Complimentary Tasting Experience</p>
+        </div>
+
+        <span class="event-tag">Completed</span>
+      </a>
+
+      <a href="events.html" class="event-item">
+        <div class="event-date">
+          <div class="event-date-day">Jun</div>
+          <div class="event-date-month">2026</div>
+        </div>
+
+        <div class="event-info">
+          <h3>Coastt × ReBrew</h3>
+          <p>Karumathampatti, Coimbatore · Kart Racing Championship</p>
+        </div>
+
+        <span class="event-tag">Completed</span>
+      </a>
+
+    </div>
+
+    <div class="text-center" style="margin-top:52px">
+      <a href="events.html" class="btn btn-dark">
+        View Event History →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     GALLERY
+══════════════════════════════════════════════════ -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow" style="color:rgba(245,237,214,0.45)">@re_brew</p>
+      <h2 class="headline-lg" style="color:var(--cream)">Life of<br>a Bottle.</h2>
+    </div>
+
+    <div class="gallery-grid stagger-children">
+      <div class="gallery-item">
+        <img src="assets/images/brand-grid.png" alt="ReBrew brand editorial grid" loading="lazy">
+        <div class="gallery-overlay"><span>Brand Story</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/bottles-lineup.png" alt="ReBrew bottles lineup" loading="lazy">
+        <div class="gallery-overlay"><span>The Collection</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/bottles-scattered.png" alt="ReBrew scattered bottles" loading="lazy">
+        <div class="gallery-overlay"><span>Behind the Label</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/label-closeup.png" alt="ReBrew label detail" loading="lazy">
+        <div class="gallery-overlay"><span>Crafted Details</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/pineapple-bottle.png" alt="ReBrew Pineapple outdoors" loading="lazy">
+        <div class="gallery-overlay"><span>In the Wild</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/bottles-dramatic.png" alt="ReBrew dramatic editorial" loading="lazy">
+        <div class="gallery-overlay"><span>Editorial Shot</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/founder.png" alt="ReBrew Founder" loading="lazy">
+        <div class="gallery-overlay"><span>The Maker</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/brand-grid.png" alt="ReBrew lifestyle" loading="lazy">
+        <div class="gallery-overlay"><span>The Lifestyle</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     NEWSLETTER
+══════════════════════════════════════════════════ -->
+<section class="newsletter-section" id="newsletter">
+  <div class="container">
+    <div class="newsletter-inner reveal">
+      <p class="eyebrow" style="text-align:center">Stay in the Loop</p>
+      <h2 class="headline-lg">Join the<br>ReBrew Circle.</h2>
+      <p>New flavours, events, and stories — delivered to your inbox. No noise, just craft.</p>
+      <form class="newsletter-form" novalidate>
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logos/rebrew-logo.png" alt="ReBrew Logo">
+        <p>"Every bottle has its own story. Brewed once. Born again. Time makes it wild."</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social" aria-label="Instagram">Ig</a>
+          <a href="https://wa.me/8438817294" class="footer-social" aria-label="WhatsApp">Wa</a>
+          <a href="https://www.linkedin.com/company/rebrew-beverages" class="footer-social" aria-label="LinkedIn">Li</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="ingredients.html">Ingredients</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Brews</a></li>
+          <li><a href="shop.html">Gift Packs</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="tel:+918438817294">+91 84388 17294</a></li>
+          <li><a href="mailto:hello.rebrew@gmail.com">hello.rebrew@gmail.com</a></li>
+          <li><a href="contact.html">Partner With Us</a></li>
+          <li><a href="contact.html">Press &amp; Media</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 ReBrew. All rights reserved. Coimbatore, India.</p>
+      <p>Handcrafted with care. Brewed once. Born again.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

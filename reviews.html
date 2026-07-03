@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews — REBREW</title>
+  <meta name="description" content="Real stories from real ReBrew drinkers. See what people are saying about India's favourite fermented fruit soda.">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">Real Stories</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer"><div class="cart-total"><span>Total</span><strong>₹0</strong></div><a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;">Checkout</a></div>
+</aside>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="shop.html">Shop</a></li><li><a href="events.html">Events</a></li><li><a href="blog.html">Journal</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="#" class="nav-cart-btn" data-open-cart>Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<!-- Hero -->
+<section style="min-height:50vh;background:var(--burgundy);display:flex;align-items:flex-end;padding-bottom:64px;position:relative;overflow:hidden;">
+  <div style="position:absolute;font-family:var(--font-serif);font-size:35vw;font-weight:900;color:rgba(255,255,255,0.03);bottom:-10%;left:-5%;pointer-events:none;line-height:1;">"</div>
+  <div class="container" style="position:relative;z-index:2;">
+    <p class="eyebrow" style="color:rgba(245,237,214,0.45);margin-bottom:16px">What People Say</p>
+    <h1 class="headline-xl" style="color:var(--cream)">Real Sips.<br>Real Stories.</h1>
+  </div>
+</section>
+
+<!-- Stats -->
+<section style="background:var(--dark-brown);padding:60px 0;">
+  <div class="container">
+    <div class="reviews-hero-stats stagger-children">
+      <div class="stat-card"><div class="stat-number"><span class="counter-num" data-target="500">0</span>+</div><div class="stat-label">Happy Customers</div></div>
+      <div class="stat-card"><div class="stat-number"><span class="counter-num" data-target="4">0</span>.9</div><div class="stat-label">Average Rating</div></div>
+      <div class="stat-card"><div class="stat-number"><span class="counter-num" data-target="30">0</span>+</div><div class="stat-label">Cafés & Restaurants</div></div>
+      <div class="stat-card"><div class="stat-number"><span class="counter-num" data-target="5">0</span></div><div class="stat-label">Flavours Loved</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section style="background:var(--aged-paper);padding:100px 0;">
+  <div class="container">
+    <div class="reviews-page-grid">
+
+      <!-- Featured Review -->
+      <div class="featured-review reveal">
+        <div>
+          <blockquote>
+            The Ginger brew is unlike anything I've tasted before. It's sharp, alive, and the fermentation gives it this wild depth that no commercial drink has. I order it by the case now.
+          </blockquote>
+          <div class="review-stars" style="margin-top:24px;"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="featured-review-author">
+            <div class="featured-review-avatar">A</div>
+            <div>
+              <h5 style="font-family:var(--font-body);font-weight:600;color:var(--dark-brown);font-size:15px;">Arjun Subramanian</h5>
+              <span style="font-family:var(--font-body);font-size:12px;color:var(--vintage-brown);">Fitness Coach · Chennai</span>
+            </div>
+          </div>
+        </div>
+        <div class="featured-review-img">
+          <img src="assets/images/pineapple-bottle.png" alt="ReBrew Pineapple" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Regular Reviews -->
+      <div class="review-card reveal" style="background:var(--cream);">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"We stocked ReBrew at our café and it became an instant hit. The Apple & Cinnamon is something our customers now specifically ask for."</p>
+        <div class="review-author"><div class="review-avatar">R</div><div class="review-author-info"><h5>Ravi Kumar</h5><span>Café Owner · Coimbatore</span></div></div>
+      </div>
+
+      <div class="review-card reveal" style="background:var(--cream);">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"As someone who doesn't drink alcohol, ReBrew has completely changed how I enjoy social moments. I feel like I'm drinking something premium and special."</p>
+        <div class="review-author"><div class="review-avatar">P</div><div class="review-author-info"><h5>Priya Menon</h5><span>Regular Customer · Bangalore</span></div></div>
+      </div>
+
+      <div class="review-card reveal" style="background:var(--cream);">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"I tried the Pineapple at a market and immediately bought 6 bottles. It's light, tropical, and you can taste that it's been made with care. Nothing like it."</p>
+        <div class="review-author"><div class="review-avatar">S</div><div class="review-author-info"><h5>Sneha Pillai</h5><span>Event Coordinator · Kochi</span></div></div>
+      </div>
+
+      <div class="review-card reveal" style="background:var(--cream);">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"The packaging is beautiful and the product matches. Grape is my go-to. Rich, slightly tart, complex in a way that grows on you with every sip."</p>
+        <div class="review-author"><div class="review-avatar">V</div><div class="review-author-info"><h5>Vikram Nair</h5><span>Designer · Bangalore</span></div></div>
+      </div>
+
+      <div class="review-card reveal" style="background:var(--cream);">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Finally something that doesn't feel like a compromise. I gave up alcohol two years ago and ReBrew is the first drink that actually makes me feel like I'm not missing out."</p>
+        <div class="review-author"><div class="review-avatar">D</div><div class="review-author-info"><h5>Deepika R.</h5><span>Yoga Teacher · Chennai</span></div></div>
+      </div>
+
+      <div class="review-card reveal" style="background:var(--cream);">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>
+        <p class="review-text">"Mint is refreshing to a level I didn't expect. Very clean, very alive. Docking one star only because I wish it came in 500ml too. Otherwise perfect."</p>
+        <div class="review-author"><div class="review-avatar">K</div><div class="review-author-info"><h5>Karan Shah</h5><span>Entrepreneur · Mumbai</span></div></div>
+      </div>
+
+      <div class="review-card reveal" style="background:var(--cream);">
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Ordered a mixed pack online. Delivery was fast and secure. All bottles arrived perfectly. The Ginger one was mind-blowing. Will be a repeat customer."</p>
+        <div class="review-author"><div class="review-avatar">M</div><div class="review-author-info"><h5>Meera Krishnan</h5><span>Online Customer · Hyderabad</span></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Write a Review -->
+<section class="write-review">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:52px;">
+      <p class="eyebrow">Share Your Story</p>
+      <h2 class="headline-lg">Write a<br>Review.</h2>
+    </div>
+    <div class="write-review-form reveal">
+      <form id="review-form" novalidate>
+        <div style="margin-bottom:20px;">
+          <p style="font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:12px;">Your Rating</p>
+          <div class="star-selector">
+            <span data-star="1">★</span><span data-star="2">★</span><span data-star="3">★</span><span data-star="4">★</span><span data-star="5">★</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div><p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">Your Name</p><input type="text" placeholder="Your name" required></div>
+          <div><p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">Favourite Flavour</p>
+            <select style="width:100%;padding:14px 18px;border:1.5px solid rgba(92,61,30,0.18);background:var(--aged-paper);font-family:var(--font-body);font-size:14px;color:var(--dark-brown);outline:none;appearance:none;">
+              <option>Grape</option><option>Apple & Cinnamon</option><option>Ginger</option><option>Pineapple</option><option>Mint</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:4px;">
+          <p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">Your Story</p>
+          <textarea rows="5" placeholder="Tell us about your ReBrew experience..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Review →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
+
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+<script>
+// Star selector
+let selectedStars = 5;
+const stars = document.querySelectorAll('.star-selector span');
+stars.forEach((star, i) => {
+  star.addEventListener('click', () => {
+    selectedStars = i + 1;
+    stars.forEach((s, j) => s.classList.toggle('active', j <= i));
+  });
+  star.addEventListener('mouseenter', () => stars.forEach((s, j) => s.style.color = j <= i ? 'var(--dusty-gold)' : 'rgba(92,61,30,0.2)'));
+  star.addEventListener('mouseleave', () => stars.forEach((s, j) => s.style.color = j < selectedStars ? 'var(--dusty-gold)' : 'rgba(92,61,30,0.2)'));
+});
+// Init all stars active
+stars.forEach(s => s.classList.add('active'));
+
+document.getElementById('review-form')?.addEventListener('submit', e => {
+  e.preventDefault();
+  window.showToast('✦ Thank you! Your review has been submitted.');
+  e.target.reset();
+  stars.forEach(s => { s.classList.add('active'); s.style.color = ''; });
+});
+</script>
+</body>
+</html>

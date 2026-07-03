@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingredients — REBREW</title>
+  <meta name="description" content="Everything inside a ReBrew bottle. Real fruit, natural fermentation, no shortcuts.">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">What's Inside</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer"><div class="cart-total"><span>Total</span><strong>₹0</strong></div><a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;">Checkout</a></div>
+</aside>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="shop.html">Shop</a></li><li><a href="events.html">Events</a></li><li><a href="blog.html">Journal</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="#" class="nav-cart-btn" data-open-cart>Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<section class="page-hero" style="background:linear-gradient(160deg,var(--dark-olive) 0%,var(--ink) 100%);">
+  <div class="container"><div class="page-hero-content">
+    <p class="eyebrow" style="color:var(--dusty-gold);margin-bottom:12px">Nothing Hidden</p>
+    <h1 class="headline-xl" style="color:var(--cream)">What's<br>Inside.</h1>
+    <p style="font-family:var(--font-fell);font-style:italic;color:rgba(245,237,214,0.5);font-size:18px;margin-top:12px">"Real ingredients. Full transparency."</p>
+  </div></div>
+</section>
+
+<!-- Hero quote -->
+<div class="ingredients-hero-quote">
+  <div class="container reveal">
+    <blockquote>"Small batches. Real ingredients. No shortcuts."</blockquote>
+  </div>
+</div>
+
+<!-- Core ingredients -->
+<section class="ingredients-showcase">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">The Foundation</p>
+      <h2 class="headline-lg">Every Bottle<br>Starts Here.</h2>
+    </div>
+    <div class="ingredient-grid stagger-children">
+      <div class="ingredient-card">
+        <div class="ingredient-icon">💧</div>
+        <h3 class="ingredient-name">Filtered Water</h3>
+        <p class="ingredient-latin">The Base</p>
+        <p class="ingredient-desc">The foundation of every brew. We use filtered, mineral-balanced water to ensure consistent fermentation and a clean, neutral base for our fruits to shine.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">🍑</div>
+        <h3 class="ingredient-name">Real Fruit</h3>
+        <p class="ingredient-latin">The Character</p>
+        <p class="ingredient-desc">We use actual fruit — grapes, apples, pineapple, ginger root — not concentrates, not flavouring, not extracts. The fruit is the brew.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">🌾</div>
+        <h3 class="ingredient-name">Cane Sugar</h3>
+        <p class="ingredient-latin">The Fuel</p>
+        <p class="ingredient-desc">A small amount of unrefined cane sugar feeds the fermentation process. Most of it gets consumed by the cultures — what remains is minimal and natural.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">🦠</div>
+        <h3 class="ingredient-name">Live Cultures</h3>
+        <p class="ingredient-latin">The Magic</p>
+        <p class="ingredient-desc">Natural fermentation cultures — yeast and beneficial bacteria — create the carbonation, develop the complexity, and give ReBrew its alive, wild character.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">⏳</div>
+        <h3 class="ingredient-name">Time</h3>
+        <p class="ingredient-latin">The Secret</p>
+        <p class="ingredient-desc">You can't rush fermentation. Time is what transforms simple ingredients into something with depth, complexity, and a story. We never shortcut this.</p>
+      </div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">🌿</div>
+        <h3 class="ingredient-name">Spices & Herbs</h3>
+        <p class="ingredient-latin">The Accent</p>
+        <p class="ingredient-desc">For Apple & Cinnamon and Mint varieties, we add real cinnamon bark and fresh mint leaves. Nothing powdered. Nothing artificial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What we don't use -->
+<section class="what-we-dont">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow" style="color:rgba(245,237,214,0.4)">Transparency</p>
+      <h2 class="headline-lg" style="color:var(--cream)">What We<br>Never Use.</h2>
+    </div>
+    <div class="dont-grid stagger-children">
+      <div class="dont-item"><span class="cross">✗</span><h4>Artificial Flavours</h4></div>
+      <div class="dont-item"><span class="cross">✗</span><h4>Artificial Colours</h4></div>
+      <div class="dont-item"><span class="cross">✗</span><h4>Preservatives</h4></div>
+      <div class="dont-item"><span class="cross">✗</span><h4>Refined Sugar</h4></div>
+      <div class="dont-item"><span class="cross">✗</span><h4>Concentrates</h4></div>
+      <div class="dont-item"><span class="cross">✗</span><h4>Artificial Carbonation</h4></div>
+      <div class="dont-item"><span class="cross">✗</span><h4>Alcohol</h4></div>
+      <div class="dont-item"><span class="cross">✗</span><h4>Shortcuts</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- Per-flavour breakdown -->
+<section class="flavor-breakdown">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">Per Flavour</p>
+      <h2 class="headline-lg">What's in<br>Each Brew.</h2>
+    </div>
+
+    <div class="flavor-tab-nav">
+      <button class="flavor-tab-btn active" data-panel="grape">Grape</button>
+      <button class="flavor-tab-btn" data-panel="apple">Apple &amp; Cinnamon</button>
+      <button class="flavor-tab-btn" data-panel="ginger">Ginger</button>
+      <button class="flavor-tab-btn" data-panel="pineapple">Pineapple</button>
+      <button class="flavor-tab-btn" data-panel="mint">Mint</button>
+    </div>
+
+    <div id="panel-grape" class="flavor-panel active">
+      <div class="flavor-panel-img img-reveal-wrap"><img src="assets/images/bottles-lineup.png" alt="Grape Brew" loading="lazy"></div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px">Grape Brew</p>
+        <h3 class="headline-md" style="margin-bottom:8px;color:var(--dark-brown)">Deep &amp; Wild</h3>
+        <p style="font-family:var(--font-fell);font-style:italic;font-size:16px;color:var(--vintage-brown);margin-bottom:28px;">"Rich with character. Tart. Alive."</p>
+        <div class="ingredient-list">
+          <div class="ingredient-item"><div class="ingredient-item-icon">🍇</div><div class="ingredient-item-info"><h4>Fresh Concord Grapes</h4><p>Dark, tannic, full-bodied grapes that ferment beautifully into a rich, complex base.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">💧</div><div class="ingredient-item-info"><h4>Filtered Water</h4><p>Mineral-balanced and neutral to support healthy fermentation.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🌾</div><div class="ingredient-item-info"><h4>Unrefined Cane Sugar</h4><p>Feeds the fermentation. Minimal residual sugar in the final product.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🦠</div><div class="ingredient-item-info"><h4>Natural Fermentation Cultures</h4><p>Wild yeast and beneficial bacteria that create carbonation and complexity.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-apple" class="flavor-panel">
+      <div class="flavor-panel-img img-reveal-wrap"><img src="assets/images/bottles-lineup.png" alt="Apple Cinnamon Brew" loading="lazy"></div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px">Apple &amp; Cinnamon Brew</p>
+        <h3 class="headline-md" style="margin-bottom:8px;color:var(--dark-brown)">Warm &amp; Spiced</h3>
+        <p style="font-family:var(--font-fell);font-style:italic;font-size:16px;color:var(--vintage-brown);margin-bottom:28px;">"Autumn in a bottle."</p>
+        <div class="ingredient-list">
+          <div class="ingredient-item"><div class="ingredient-item-icon">🍎</div><div class="ingredient-item-info"><h4>Fresh Apples</h4><p>Crisp, tart orchard apples fermented to develop natural sweetness and depth.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🪵</div><div class="ingredient-item-info"><h4>Aged Cinnamon Bark</h4><p>Real Sri Lankan cinnamon bark — not powder — steeped through the fermentation process.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">💧</div><div class="ingredient-item-info"><h4>Filtered Water</h4><p>Clean and balanced to carry the warm spice profile.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🦠</div><div class="ingredient-item-info"><h4>Natural Fermentation Cultures</h4><p>Wild yeast and bacteria doing their slow, beautiful work.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-ginger" class="flavor-panel">
+      <div class="flavor-panel-img img-reveal-wrap"><img src="assets/images/pineapple-bottle.png" alt="Ginger Brew" loading="lazy"></div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px">Ginger Brew</p>
+        <h3 class="headline-md" style="margin-bottom:8px;color:var(--dark-brown)">Sharp &amp; Alive</h3>
+        <p style="font-family:var(--font-fell);font-style:italic;font-size:16px;color:var(--vintage-brown);margin-bottom:28px;">"Wakes you up from the first sip."</p>
+        <div class="ingredient-list">
+          <div class="ingredient-item"><div class="ingredient-item-icon">🫚</div><div class="ingredient-item-info"><h4>Fresh Ginger Root</h4><p>Whole ginger root — pressed and steeped for maximum heat and natural flavour.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🍋</div><div class="ingredient-item-info"><h4>Lemon Juice</h4><p>A small amount of real lemon juice adds brightness and supports fermentation pH.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">💧</div><div class="ingredient-item-info"><h4>Filtered Water</h4><p>Neutral base for a clean, sharp ginger expression.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🦠</div><div class="ingredient-item-info"><h4>Natural Fermentation Cultures</h4><p>Creates the natural fizz and wild character of a true ginger brew.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-pineapple" class="flavor-panel">
+      <div class="flavor-panel-img img-reveal-wrap"><img src="assets/images/pineapple-bottle.png" alt="Pineapple Brew" loading="lazy"></div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px">Pineapple Brew</p>
+        <h3 class="headline-md" style="margin-bottom:8px;color:var(--dark-brown)">Tropical &amp; Light</h3>
+        <p style="font-family:var(--font-fell);font-style:italic;font-size:16px;color:var(--vintage-brown);margin-bottom:28px;">"Sun-ripened. Naturally alive."</p>
+        <div class="ingredient-list">
+          <div class="ingredient-item"><div class="ingredient-item-icon">🍍</div><div class="ingredient-item-info"><h4>Fresh Pineapple</h4><p>Whole pineapples — including core — fermented for tropical depth and natural sweetness.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">💧</div><div class="ingredient-item-info"><h4>Filtered Water</h4><p>Light and clean to let the pineapple character lead.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🌾</div><div class="ingredient-item-info"><h4>Unrefined Cane Sugar</h4><p>Minimal — mostly consumed during fermentation to create natural carbonation.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🦠</div><div class="ingredient-item-info"><h4>Natural Fermentation Cultures</h4><p>Creates the effervescence that makes every sip feel alive.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-mint" class="flavor-panel">
+      <div class="flavor-panel-img img-reveal-wrap"><img src="assets/images/bottles-lineup.png" alt="Mint Brew" loading="lazy"></div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px">Mint Brew</p>
+        <h3 class="headline-md" style="margin-bottom:8px;color:var(--dark-brown)">Cool &amp; Herbal</h3>
+        <p style="font-family:var(--font-fell);font-style:italic;font-size:16px;color:var(--vintage-brown);margin-bottom:28px;">"The cleanest sip in the collection."</p>
+        <div class="ingredient-list">
+          <div class="ingredient-item"><div class="ingredient-item-icon">🌿</div><div class="ingredient-item-info"><h4>Fresh Spearmint Leaves</h4><p>Hand-picked spearmint, steeped through fermentation for a clean, cool herbal character.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🍋</div><div class="ingredient-item-info"><h4>Lime Juice</h4><p>A dash of fresh lime juice brightens the mint and adds tartness to the finish.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">💧</div><div class="ingredient-item-info"><h4>Filtered Water</h4><p>Ultra-clean water to let the herbal notes shine without interference.</p></div></div>
+          <div class="ingredient-item"><div class="ingredient-item-icon">🦠</div><div class="ingredient-item-info"><h4>Natural Fermentation Cultures</h4><p>The gentle fermentation creates a soft, refreshing fizz that complements mint perfectly.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="certifications">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">Our Standards</p>
+      <h2 class="headline-lg">What We<br>Stand Behind.</h2>
+    </div>
+    <div class="cert-grid stagger-children">
+      <div class="cert-card"><div class="cert-icon">🔬</div><h4>Lab Tested</h4><p>Every batch is tested for quality and safety before it leaves our facility.</p></div>
+      <div class="cert-card"><div class="cert-icon">🌿</div><h4>No Artificial Additives</h4><p>We have a strict no-artificial-anything policy. What you see on the label is everything inside.</p></div>
+      <div class="cert-card"><div class="cert-icon">♻️</div><h4>Glass Bottled</h4><p>We use glass — not plastic — for better taste, sustainability, and recyclability.</p></div>
+      <div class="cert-card"><div class="cert-icon">🇮🇳</div><h4>Made in India</h4><p>Brewed, bottled, and dispatched from Coimbatore, Tamil Nadu. Always.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
+
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+<script>
+document.querySelectorAll('.flavor-tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.flavor-tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.flavor-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + btn.dataset.panel)?.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

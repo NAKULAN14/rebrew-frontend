@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — REBREW</title>
+  <meta name="description" content="Explore ReBrew's handcrafted fermented fruit brews. Grape, Apple & Cinnamon, Ginger, Pineapple, and Mint. Non-alcoholic. Naturally fermented.">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">The Collection</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer"><div class="cart-total"><span>Total</span><strong>₹0</strong></div><a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;">Checkout</a></div>
+</aside>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html" class="active">Products</a></li><li><a href="shop.html">Shop</a></li><li><a href="events.html">Events</a></li><li><a href="blog.html">Journal</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="#" class="nav-cart-btn" data-open-cart>Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html" class="active" aria-current="page">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="eyebrow" style="color:var(--dusty-gold);margin-bottom:8px">5 Flavours · 275ml Each</p>
+      <h1 class="headline-xl" style="color:var(--cream)">The<br>Collection.</h1>
+      <p style="font-family:var(--font-fell);font-style:italic;color:rgba(245,237,214,0.5);font-size:18px;margin-top:12px">"Naturally fermented. Always alive."</p>
+    </div>
+  </div>
+</section>
+
+<section class="product-detail-section bg-cream">
+  <div class="container" id="products-container">
+    <!-- Products rendered dynamically by products-render script below -->
+    <div id="products-loading" style="text-align:center;padding:80px 0;font-family:var(--font-body);font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dusty-gold);">
+      Loading collection&hellip;
+    </div>
+  </div>
+</section>
+
+<section style="padding:80px 0;background:var(--dark-brown);text-align:center;">
+  <div class="container reveal">
+    <p class="eyebrow" style="text-align:center;margin-bottom:16px">Can't Decide?</p>
+    <h2 class="headline-lg" style="color:var(--cream);margin-bottom:16px">Try the Full<br>Collection.</h2>
+    <p style="font-family:var(--font-fell);font-style:italic;color:rgba(245,237,214,0.5);font-size:17px;margin-bottom:36px">All 5 flavours. One box. One story.</p>
+    <a href="shop.html" class="btn btn-primary">Shop All →</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li><li><a href="ingredients.html">Ingredients</a></li><li><a href="blog.html">Journal</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="cart.html">Cart</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
+
+<script src="js/api.js"></script>
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+
+<script>
+/* ── Products page: fetch and render detail sections ── */
+(async function initProductsPage() {
+  const container = document.getElementById('products-container');
+  const loading   = document.getElementById('products-loading');
+
+  let products = [];
+  try {
+    products = await getProducts();
+  } catch (err) {
+    loading.textContent = 'Could not load products. Please refresh.';
+    console.error('Products page load error:', err);
+    return;
+  }
+
+  // Sync cart.js PRODUCTS catalog
+  syncProductsCatalog(products);
+
+  function buildDetailSection(product, index) {
+    const meta     = FLAVOR_META[product.flavor] || {};
+    const imgSrc   = getProductImage(product);
+    const flavor   = product.flavor;
+    const price    = product.price;
+    const isEven   = index % 2 !== 0; // alternating layout via CSS nth-child
+
+    const badgeHtml = meta.badge
+      ? `<span class="product-detail-badge">${meta.badge}</span>`
+      : '';
+
+    const tagsHtml = (product.tastingNotes || [])
+      .slice(0, 4)
+      .map(t => `<span class="product-tag">${t.charAt(0).toUpperCase() + t.slice(1)}</span>`)
+      .join('');
+
+    const outOfStock = product.stock <= 0;
+    const btnHtml = outOfStock
+      ? `<button class="btn btn-primary" style="opacity:0.5;cursor:not-allowed;" disabled>Out of Stock</button>`
+      : `<button class="btn btn-primary" data-add-to-cart="${flavor}">Add to Cart — ₹${price}</button>`;
+
+    // Display name: "ReBrew Grape" → "Grape<br>Brew"
+    const baseName = product.name.replace('ReBrew ', '');
+    const displayName = baseName.includes('&')
+      ? baseName.replace(' & ', ' &amp;<br>')  // "Apple & Cinnamon" → two lines
+      : `${baseName}<br>Brew`;
+
+    return `
+    <div class="product-detail reveal">
+      <div class="product-detail-img img-reveal-wrap visible">
+        <img src="${imgSrc}" alt="${product.name}" loading="lazy">
+        ${badgeHtml}
+      </div>
+      <div class="product-detail-text">
+        <span class="product-flavor-label" style="background:${meta.color || '#5C3D1E'};">${baseName}</span>
+        <h2 class="product-detail-name">${displayName}</h2>
+        <p class="product-detail-latin">${meta.latin || ''}</p>
+        <p class="product-detail-desc">"${product.shortDescription || ''}"</p>
+        <div class="product-specs">
+          <div class="product-spec">
+            <div class="product-spec-label">Volume</div>
+            <div class="product-spec-value">${product.volume || 275}ml</div>
+          </div>
+          <div class="product-spec">
+            <div class="product-spec-label">Alcohol</div>
+            <div class="product-spec-value">${product.alcoholContent !== undefined ? product.alcoholContent.toFixed(1) : '0.0'}%</div>
+          </div>
+          <div class="product-spec">
+            <div class="product-spec-label">Carbonation</div>
+            <div class="product-spec-value">Natural</div>
+          </div>
+          <div class="product-spec">
+            <div class="product-spec-label">Shelf Life</div>
+            <div class="product-spec-value">90 Days</div>
+          </div>
+        </div>
+        <div class="product-tags">
+          <span class="product-tag">Non-Alcoholic</span>
+          <span class="product-tag">Naturally Fermented</span>
+          ${tagsHtml}
+        </div>
+        <div class="product-actions">
+          <div class="qty-selector">
+            <button class="qty-btn minus">−</button>
+            <input class="qty-input" type="number" value="1" min="1">
+            <button class="qty-btn plus">+</button>
+          </div>
+          ${btnHtml}
+        </div>
+      </div>
+    </div>`;
+  }
+
+  // Remove loading state and render all products
+  loading.remove();
+  container.insertAdjacentHTML('beforeend', products.map(buildDetailSection).join(''));
+
+  // Reinitialise qty selectors for dynamically rendered elements
+  container.querySelectorAll('.qty-selector').forEach(sel => {
+    const input = sel.querySelector('.qty-input');
+    sel.querySelector('.minus').addEventListener('click', () => {
+      const v = parseInt(input.value) - 1;
+      input.value = v < 1 ? 1 : v;
+    });
+    sel.querySelector('.plus').addEventListener('click', () => {
+      input.value = parseInt(input.value) + 1;
+    });
+  });
+
+  // Re-trigger scroll-reveal for dynamically added .reveal elements
+  // main.js sets up IntersectionObserver on DOMContentLoaded —
+  // by the time products load the observer is already running,
+  // so we observe each new reveal element manually.
+  if (window._rebrewRevealObserver) {
+    container.querySelectorAll('.reveal').forEach(el => {
+      window._rebrewRevealObserver.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>

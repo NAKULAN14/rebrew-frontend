@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — REBREW</title>
+  <meta name="description" content="The story behind ReBrew. Started from curiosity, built with obsession. A handcrafted fermented fruit soda from Coimbatore.">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader">
+  <img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo">
+  <p class="loader-text">Our Story</p>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><strong>₹0</strong></div>
+    <a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;">Checkout</a>
+  </div>
+</aside>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="blog.html">Journal</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="#" class="nav-cart-btn" data-open-cart>Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active" aria-current="page">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="eyebrow" style="color:var(--dusty-gold);margin-bottom:8px">Est. 2025 · Coimbatore</p>
+      <h1 class="headline-xl" style="color:var(--cream)">Our<br>Story.</h1>
+      <p style="font-family:var(--font-fell);font-style:italic;color:rgba(245,237,214,0.5);font-size:18px;margin-top:12px">"Started from curiosity."</p>
+    </div>
+  </div>
+</section>
+
+<!-- Full Founder Story -->
+<section class="founder-story" style="padding-top:100px;padding-bottom:100px;">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-image-wrap reveal-left">
+        <div class="founder-image-frame">
+          <img src="assets/images/founder.png" alt="ReBrew Founder" loading="lazy">
+          <div class="founder-image-caption">
+            <p>"Every batch taught us something new."</p>
+          </div>
+        </div>
+      </div>
+      <div class="founder-text reveal">
+        <p class="eyebrow">The Beginning</p>
+        <h2 class="headline-lg">Brewed from<br>an Obsession.</h2>
+        <div class="divider"></div>
+        <div class="founder-story-text">
+          <p>ReBrew started from curiosity more than a business plan. I always wanted to create something that felt <strong>different from regular soft drinks</strong> — something with more character, more depth, and more of a story behind it.</p>
+          <p>What began as small experiments with fruits, fermentation, and flavour combinations slowly turned into an obsession with building a unique beverage experience.</p>
+          <p>The early days were filled with trial batches, failed experiments, recipe changes, and learning how fermentation behaves over time. Every bottle taught something new.</p>
+          <p>Instead of creating another sugary soda, the goal was to build a <strong>handcrafted fruit brew that felt refreshing, naturally alive, and slightly different</strong> every time you opened it.</p>
+          <p>That idea eventually became ReBrew.</p>
+        </div>
+        <blockquote class="founder-pull-quote">
+          "To create a drink that feels different."
+        </blockquote>
+        <div class="founder-story-text">
+          <p>From designing the first labels and testing flavours to supplying cafés, restaurants, and retail shelves, the journey has been built <strong>one step at a time</strong> — with consistency, experimentation, and the belief that people are always looking for something new to discover.</p>
+          <p>Today, ReBrew continues to grow across stores, restaurants, and events, while staying true to the same vision it started with.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission Block -->
+<div class="mission-block">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow" style="color:rgba(245,237,214,0.4);text-align:center;margin-bottom:32px">Our Mission</p>
+      <blockquote>
+        "Small batches. Real ingredients. No shortcuts."
+        <cite>— The ReBrew Standard</cite>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<!-- Brand Values -->
+<section class="page-pad bg-cream">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">What We Stand For</p>
+      <h2 class="headline-lg">The ReBrew<br>Values.</h2>
+    </div>
+    <div class="values-grid stagger-children">
+      <div class="value-card">
+        <div class="value-icon">🌿</div>
+        <h3>Authenticity</h3>
+        <p>Every ingredient, every bottle, every batch is genuinely what it says it is. No compromise, no shortcut, no greenwashing.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⏳</div>
+        <h3>Patience</h3>
+        <p>Good things take time. We don't rush the fermentation. We let nature do what it does best — and trust the process.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔬</div>
+        <h3>Curiosity</h3>
+        <p>The spirit that started ReBrew. We're always experimenting, always learning, always pushing toward something more interesting.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Community</h3>
+        <p>ReBrew was built for people who love finding something new. For cafés, for tables, for conversations.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">♻️</div>
+        <h3>Responsibility</h3>
+        <p>Minimal processing, glass bottles, no artificial additives. Good for you. Good for the planet.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🍾</div>
+        <h3>Craft</h3>
+        <p>Every detail matters — the label design, the fermentation notes, the texture of the fizz. This is craft beverage making.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="page-pad bg-paper">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow">The Journey</p>
+      <h2 class="headline-lg">From Batch 001<br>to Today.</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Oct 2025</div>
+        <h3 class="timeline-title">First Experiment</h3>
+        <p class="timeline-text">Kitchen-scale fermentation tests begin. Failed batches, exploding bottles, and a growing obsession with fruit fermentation.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Nov 2025</div>
+        <h3 class="timeline-title">The First Label</h3>
+        <p class="timeline-text">First production-ready batch. Label design finalized. Grape and Ginger debut at a local market — sells out in 2 hours.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Dec 2025</div>
+        <h3 class="timeline-title">Café Partnerships</h3>
+        <p class="timeline-text">First café orders land. Apple & Cinnamon and Pineapple flavours added. Growing word-of-mouth in Coimbatore.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Jan 2026</div>
+        <h3 class="timeline-title">Retail & Events</h3>
+        <p class="timeline-text">ReBrew lands on retail shelves. Festival pop-ups begin. Mint flavour launches. Brand identity refined and production scaled.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2026</div>
+        <h3 class="timeline-title">Growing the Dream</h3>
+        <p class="timeline-text">Expanding across South India. New flavours in development. Restaurant and hospitality partnerships deepening. The story continues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:80px 0;background:var(--dusty-gold);text-align:center;">
+  <div class="container reveal">
+    <h2 class="headline-lg" style="color:var(--dark-brown);margin-bottom:16px">Ready to Try?</h2>
+    <p style="font-family:var(--font-fell);font-style:italic;font-size:18px;color:var(--vintage-brown);margin-bottom:36px">Your first sip of something different starts here.</p>
+    <a href="shop.html" class="btn btn-dark">Shop Now →</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p>
+        <div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li><li><a href="ingredients.html">Ingredients</a></li><li><a href="blog.html">Journal</a></li></ul></div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="cart.html">Cart</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="tel:+918438817294">+91 84388 17294</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p><p>Handcrafted with care.</p></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+</body>
+</html>

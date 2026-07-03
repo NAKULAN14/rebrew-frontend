@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Secure checkout for ReBrew. Fast delivery across India. Pay via UPI, Card or Net Banking — powered by Razorpay.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — REBREW</title>
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">Checkout</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+
+<nav class="navbar scrolled" style="position:relative;background:rgba(245,237,214,0.98);">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <div style="font-family:var(--font-body);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--vintage-brown);">🔒 Secure Checkout</div>
+</nav>
+
+<div class="checkout-page">
+  <div class="container">
+    <div class="checkout-breadcrumb">
+      <a href="cart.html">Cart</a>
+      <span>›</span>
+      <strong>Checkout</strong>
+      <span>›</span>
+      <span style="color:rgba(92,61,30,0.3)">Confirmation</span>
+    </div>
+
+    <!-- Success State -->
+    <div class="order-success" id="order-success">
+      <div class="success-icon">✦</div>
+      <h2>Order Placed!</h2>
+      <p>"Your brew is on its way. Time makes it worth the wait."</p>
+      <p style="font-family:var(--font-body);font-size:14px;color:var(--vintage-brown);margin-bottom:32px;">We'll send a confirmation to your email shortly.</p>
+      <a href="shop.html" class="btn btn-primary">Continue Shopping →</a>
+    </div>
+
+    <!-- Checkout Form -->
+    <div id="checkout-form-wrap">
+      <div class="checkout-layout">
+        <!-- Left: Form -->
+        <div class="checkout-form-section">
+          <h2>Delivery Details</h2>
+
+          <form class="checkout-form-el" id="checkout-form" novalidate>
+            <!-- Contact -->
+            <div class="section-divider">Contact Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Arjun" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Kumar" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="arjun@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+            </div>
+
+            <!-- Shipping -->
+            <div class="section-divider">Shipping Address</div>
+            <div class="form-group">
+              <label for="address">Street Address</label>
+              <input type="text" id="address" placeholder="12, Anna Nagar, 2nd Street" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Coimbatore" required>
+              </div>
+              <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" required>
+                  <option value="">Select State</option>
+                  <option>Tamil Nadu</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Telangana</option>
+                  <option>Maharashtra</option>
+                  <option>Delhi</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pincode">PIN Code</label>
+                <input type="text" id="pincode" placeholder="641001" maxlength="6" required>
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" value="India" readonly>
+              </div>
+            </div>
+
+            <!-- Payment -->
+            <div class="section-divider">Payment Method</div>
+            <!-- Razorpay handles payment method selection inside its modal.
+                 No card fields needed here — Razorpay Checkout collects them securely. -->
+            <div class="card-fields visible" id="card-fields" style="margin-bottom:20px;">
+              <div style="background:var(--aged-paper);padding:18px 20px;border:1px solid rgba(92,61,30,0.1);">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                  <span style="font-size:18px;">🔒</span>
+                  <span style="font-family:var(--font-body);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(92,61,30,0.5);">Secured by</span>
+                  <span style="font-family:var(--font-serif);font-weight:700;font-size:17px;color:#2D81F7;">Razorpay</span>
+                </div>
+                <p style="font-family:var(--font-body);font-size:12px;color:var(--vintage-brown);line-height:1.65;margin:0;">
+                  Pay securely via <strong>UPI</strong> (Google Pay · PhonePe · Paytm),
+                  <strong>Debit/Credit Card</strong>, or <strong>Net Banking</strong>.
+                  A secure payment window opens after you click Place Order.
+                </p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-glow" style="width:100%;justify-content:center;font-size:14px;padding:18px;" id="place-order-btn">
+              Place Order →
+            </button>
+
+            <p style="font-family:var(--font-body);font-size:11px;color:rgba(92,61,30,0.4);text-align:center;margin-top:14px;letter-spacing:0.05em;">
+              By placing your order you agree to our terms and privacy policy.
+            </p>
+          </form>
+        </div>
+
+        <!-- Right: Summary -->
+        <div class="checkout-summary">
+          <h3>Order Summary</h3>
+          <div class="checkout-items-list">
+            <!-- Populated by cart.js -->
+          </div>
+
+          <!-- Shipping line — updated live by calculateShipping() -->
+          <div class="summary-item" style="margin-top:8px;">
+            <span>Shipping</span>
+            <span id="checkout-shipping-cost">—</span>
+          </div>
+
+          <div class="summary-total">
+            <span>Grand Total</span>
+            <strong class="checkout-total-value">₹0</strong>
+          </div>
+
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(92,61,30,0.1);">
+            <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;">
+              <span style="font-size:18px;">🚚</span>
+              <div>
+                <p style="font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--dark-brown);letter-spacing:0.05em;">Estimated Delivery</p>
+                <p style="font-family:var(--font-body);font-size:13px;color:var(--vintage-brown);" id="checkout-delivery-estimate">Enter your city to see delivery time</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <span style="font-size:18px;">📦</span>
+              <div>
+                <p style="font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--dark-brown);letter-spacing:0.05em;">Safe Packaging</p>
+                <p style="font-family:var(--font-body);font-size:13px;color:var(--vintage-brown);">All bottles bubble-wrapped</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:24px;">
+            <img src="assets/logos/rebrew-logo.png" alt="ReBrew" style="width:48px;opacity:0.25;display:block;margin:0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Razorpay Checkout SDK — must load before checkout.js -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+<script>
+// selectPayment is only kept for future use — Razorpay handles
+// payment method selection inside its own modal.
+function selectPayment(el, type) {
+  document.querySelectorAll('.payment-option').forEach(o => {
+    o.classList.remove('selected');
+    if (o.querySelector('input')) o.querySelector('input').checked = false;
+  });
+  el.classList.add('selected');
+  if (el.querySelector('input')) el.querySelector('input').checked = true;
+}
+</script>
+</body>
+</html>

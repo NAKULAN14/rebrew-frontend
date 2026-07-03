@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — REBREW</title>
+  <meta name="description" content="Frequently asked questions about ReBrew. Learn about fermentation, shipping, ingredients and more.">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">FAQ</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer"><div class="cart-total"><span>Total</span><strong>₹0</strong></div><a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;">Checkout</a></div>
+</aside>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="shop.html">Shop</a></li><li><a href="events.html">Events</a></li><li><a href="blog.html">Journal</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="#" class="nav-cart-btn" data-open-cart>Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<section class="page-hero">
+  <div class="container"><div class="page-hero-content">
+    <p class="eyebrow" style="color:var(--dusty-gold);margin-bottom:12px">Got Questions?</p>
+    <h1 class="headline-xl" style="color:var(--cream)">FAQ.</h1>
+    <p style="font-family:var(--font-fell);font-style:italic;color:rgba(245,237,214,0.5);font-size:18px;margin-top:12px">"We've got answers."</p>
+  </div></div>
+</section>
+
+<section class="faq-page bg-cream">
+  <div class="container">
+    <div style="max-width:800px;margin:0 auto;">
+      <div class="faq-categories reveal">
+        <button class="faq-cat-btn active" data-cat="all">All</button>
+        <button class="faq-cat-btn" data-cat="product">Product</button>
+        <button class="faq-cat-btn" data-cat="fermentation">Fermentation</button>
+        <button class="faq-cat-btn" data-cat="shipping">Shipping</button>
+        <button class="faq-cat-btn" data-cat="health">Health</button>
+        <button class="faq-cat-btn" data-cat="wholesale">Wholesale</button>
+      </div>
+
+      <div class="faq-list">
+        <!-- Product -->
+        <div class="faq-item reveal" data-cat="product">
+          <div class="faq-question"><h3>What is ReBrew?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>ReBrew is a premium handcrafted fermented fruit soda — naturally carbonated, 0.0% alcohol, made with real fruit and no artificial additives. Each bottle is a small-batch brew with its own unique character.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="product">
+          <div class="faq-question"><h3>What flavours are available?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>We currently offer five flavours: Grape, Apple & Cinnamon, Ginger, Pineapple, and Mint. Each is brewed separately and has its own distinct tasting notes and character.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="product">
+          <div class="faq-question"><h3>How much is in each bottle?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Each ReBrew bottle is 275ml — the perfect serving size. One bottle, one story.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="product">
+          <div class="faq-question"><h3>How long is the shelf life?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>ReBrew has a shelf life of 90 days from the bottling date. Because it's naturally fermented with no preservatives, it's best consumed fresh. Store in a cool, dark place and refrigerate after opening.</p></div>
+        </div>
+
+        <!-- Fermentation -->
+        <div class="faq-item reveal" data-cat="fermentation">
+          <div class="faq-question"><h3>What does "naturally fermented" mean?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Natural fermentation means we use real fruit and time — no artificial carbonation or forced fermentation. The bubbles you taste are produced naturally by the fermentation process itself. This gives ReBrew its alive, wild character.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="fermentation">
+          <div class="faq-question"><h3>Does ReBrew contain alcohol?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>No. ReBrew is 0.0% alcohol. The fermentation process is carefully controlled to keep it fully non-alcoholic, making it suitable for everyone including children and those who abstain from alcohol.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="fermentation">
+          <div class="faq-question"><h3>Why does each bottle taste slightly different?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>That's the magic of small-batch fermentation. Natural processes create slight variations between batches — in carbonation level, tartness, and flavour depth. This is a feature, not a flaw. Every bottle genuinely has its own story.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="fermentation">
+          <div class="faq-question"><h3>What is "Bottled Alive" mean on the label?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Bottled Alive means we seal each bottle at the peak of active fermentation, capturing live cultures and natural carbonation inside. The brew continues its subtle fermentation journey even in the bottle — hence, it's alive.</p></div>
+        </div>
+
+        <!-- Shipping -->
+        <div class="faq-item reveal" data-cat="shipping">
+          <div class="faq-question"><h3>Do you ship across India?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Yes! We deliver pan-India. Shipping is free on orders above ₹1000. For orders below ₹1000, a flat shipping fee of ₹40 applies.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="shipping">
+          <div class="faq-question"><h3>How long does delivery take?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Standard delivery is 3–5 business days across India. Orders from Coimbatore and nearby areas may arrive faster. You'll receive a tracking link once your order is dispatched.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="shipping">
+          <div class="faq-question"><h3>How do you ensure bottles don't break during shipping?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>All bottles are individually bubble-wrapped and packed in secure corrugated boxes. If anything arrives damaged, contact us within 24 hours with a photo and we'll replace it, no questions asked.</p></div>
+        </div>
+
+        <!-- Health -->
+        <div class="faq-item reveal" data-cat="health">
+          <div class="faq-question"><h3>Is ReBrew good for gut health?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Naturally fermented drinks have been traditionally associated with gut-friendly benefits due to the presence of natural cultures. While ReBrew isn't a medical product, it's made without artificial additives, preservatives, or excess sugar — making it a far healthier choice than conventional sodas.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="health">
+          <div class="faq-question"><h3>Can children drink ReBrew?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>ReBrew is 0.0% alcohol and made with natural ingredients. However, as it's a fermented product with some tartness and natural cultures, we recommend it for ages 12 and above. When in doubt, consult with your physician.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="health">
+          <div class="faq-question"><h3>How much sugar is in ReBrew?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>ReBrew uses only the natural sugars present in fruit, which are partially consumed during fermentation. There's no added refined sugar, corn syrup, or artificial sweeteners. Exact nutritional info per flavour is available on our packaging.</p></div>
+        </div>
+
+        <!-- Wholesale -->
+        <div class="faq-item reveal" data-cat="wholesale">
+          <div class="faq-question"><h3>Can I stock ReBrew at my café or restaurant?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Absolutely. We actively partner with cafés, restaurants, hotels, and retail stores. Reach out to us at hello.rebrew@gmail.com or via our <a href="contact.html" style="color:var(--dusty-gold);">contact page</a> with your details and we'll get back to you within 24 hours.</p></div>
+        </div>
+        <div class="faq-item reveal" data-cat="wholesale">
+          <div class="faq-question"><h3>Is there a minimum order for wholesale?</h3><div class="faq-icon">+</div></div>
+          <div class="faq-answer"><p>Yes. Wholesale orders start at a minimum of 24 bottles per order. We offer competitive pricing, dedicated support, and point-of-sale materials for our trade partners.</p></div>
+        </div>
+      </div>
+
+      <!-- Still need help -->
+      <div class="faq-still-help reveal">
+        <h3>Still Have Questions?</h3>
+        <p>"We're a small team and we actually reply."</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Contact Us →</a>
+          <a href="tel:+918438817294" class="btn btn-outline">Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="cart.html">Cart</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="tel:+918438817294">+91 84388 17294</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
+
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+<script>
+// FAQ category filter
+document.querySelectorAll('.faq-cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.faq-cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

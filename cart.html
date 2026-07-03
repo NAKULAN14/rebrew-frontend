@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="View your ReBrew cart. Checkout securely and get fresh fermented fruit brews delivered across India.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart — REBREW</title>
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">Your Cart</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer"><div class="cart-total"><span>Total</span><strong>₹0</strong></div><a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;">Checkout</a></div>
+</aside>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="shop.html">Shop</a></li><li><a href="events.html">Events</a></li><li><a href="blog.html">Journal</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="cart.html" class="nav-cart-btn active">Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<section class="cart-page-section bg-cream" style="padding-top:120px;">
+  <div class="container">
+    <h1 class="cart-page-heading reveal">Your Cart.</h1>
+    <p class="cart-page-sub reveal">"Every great sip starts with a good decision."</p>
+
+    <div class="cart-page-layout">
+      <!-- Table -->
+      <div>
+        <table class="cart-page-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody class="cart-table-body">
+            <!-- Populated by cart.js -->
+          </tbody>
+        </table>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:32px;flex-wrap:wrap;gap:12px;">
+          <a href="shop.html" class="btn btn-dark" style="font-size:11px;">← Continue Shopping</a>
+          <button onclick="Cart.clear();window.showToast('Cart cleared.');" class="btn" style="background:none;border:1.5px solid rgba(92,61,30,0.2);color:var(--vintage-brown);font-size:11px;padding:12px 24px;">Clear Cart</button>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="cart-page-summary">
+        <h3>Order Summary</h3>
+
+        <div class="summary-item"><span>Subtotal</span><span id="cart-subtotal">₹0</span></div>
+        <div class="summary-item"><span>Shipping</span><span style="font-style:italic;color:rgba(92,61,30,0.5);">Calculated at Checkout</span></div>
+        <div class="summary-item"><span>Discount</span><span id="cart-discount">—</span></div>
+
+        <div class="promo-row">
+          <input type="text" placeholder="Promo code" id="promo-input">
+          <button onclick="applyPromo()">Apply</button>
+        </div>
+
+        <div class="summary-total" style="border-top:1.5px solid rgba(92,61,30,0.15);padding-top:20px;margin-top:8px;">
+          <span>Subtotal</span>
+          <strong id="cart-page-grand">₹0</strong>
+        </div>
+
+        <a href="checkout.html" class="btn btn-primary btn-glow" style="width:100%;justify-content:center;margin-top:24px;font-size:13px;">
+          Proceed to Checkout →
+        </a>
+
+        <div style="margin-top:20px;text-align:center;">
+          <p style="font-family:var(--font-body);font-size:11px;color:rgba(92,61,30,0.4);letter-spacing:0.1em;">🔒 Secure Checkout · SSL Encrypted</p>
+        </div>
+
+        <!-- Payment icons — COD removed -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;justify-content:center;">
+          <span style="padding:5px 10px;border:1px solid rgba(92,61,30,0.12);font-family:var(--font-body);font-size:10px;color:var(--vintage-brown);">VISA</span>
+          <span style="padding:5px 10px;border:1px solid rgba(92,61,30,0.12);font-family:var(--font-body);font-size:10px;color:var(--vintage-brown);">Mastercard</span>
+          <span style="padding:5px 10px;border:1px solid rgba(92,61,30,0.12);font-family:var(--font-body);font-size:10px;color:var(--vintage-brown);">UPI</span>
+          <span style="padding:5px 10px;border:1px solid rgba(92,61,30,0.12);font-family:var(--font-body);font-size:10px;color:var(--vintage-brown);">Stripe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- You May Also Love -->
+<section class="cart-also-love">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow">Don't Miss Out</p>
+      <h2 class="headline-md">You May Also Love</h2>
+    </div>
+    <div class="also-love-grid stagger-children">
+      <div class="also-love-card">
+        <img src="assets/images/pineapple-bottle.png" alt="Pineapple">
+        <h4>Pineapple</h4>
+        <p>₹110 · 275ml</p>
+        <button class="btn btn-dark" style="font-size:10px;padding:10px 18px;" data-add-to-cart="pineapple">Add to Cart</button>
+      </div>
+      <div class="also-love-card">
+        <img src="assets/images/bottles-lineup.png" alt="Grape">
+        <h4>Grape</h4>
+        <p>₹110 · 275ml</p>
+        <button class="btn btn-dark" style="font-size:10px;padding:10px 18px;" data-add-to-cart="grape">Add to Cart</button>
+      </div>
+      <div class="also-love-card">
+        <img src="assets/images/bottles-lineup.png" alt="Mint">
+        <h4>Mint</h4>
+        <p>₹110 · 275ml</p>
+        <button class="btn btn-dark" style="font-size:10px;padding:10px 18px;" data-add-to-cart="mint">Add to Cart</button>
+      </div>
+      <div class="also-love-card">
+        <img src="assets/images/bottles-lineup.png" alt="Ginger">
+        <h4>Ginger</h4>
+        <p>₹110 · 275ml</p>
+        <button class="btn btn-dark" style="font-size:10px;padding:10px 18px;" data-add-to-cart="ginger">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
+
+<script src="js/api.js"></script>
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+<script>
+// Update cart page totals dynamically
+function updateCartPageTotals() {
+  const subtotal = Cart.total();
+  const shipping = subtotal > 0 ? 40 : 0;
+  const grand = subtotal + shipping;
+  const subtotalEl = document.getElementById('cart-subtotal');
+  const grandEl = document.getElementById('cart-page-grand');
+  if (subtotalEl) subtotalEl.textContent = '₹' + subtotal.toLocaleString('en-IN');
+  if (grandEl) grandEl.textContent = '₹' + grand.toLocaleString('en-IN');
+}
+
+function applyPromo() {
+  const input = document.getElementById('promo-input');
+  const discount = document.getElementById('cart-discount');
+  if (!input) return;
+  const code = input.value.trim().toUpperCase();
+  if (code === 'REBREW10') {
+    if (discount) discount.textContent = '−₹' + Math.round(Cart.total() * 0.1).toLocaleString('en-IN');
+    window.showToast('✦ Promo REBREW10 applied — 10% off!');
+  } else if (code === 'FIRST50') {
+    if (discount) discount.textContent = '−₹50';
+    window.showToast('✦ Promo FIRST50 applied — ₹50 off!');
+  } else {
+    window.showToast('Invalid promo code.');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(updateCartPageTotals, 300);
+  // Also patch Cart.render to update page totals
+  const origRender = Cart.render.bind(Cart);
+  Cart.render = function() { origRender(); updateCartPageTotals(); };
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+/* ============================================================
+   REBREW — responsive.css  (Improved & Audited)
+   Fixes: ingredients page tabs, reviews featured layout,
+          blog featured section, events card layout,
+          checkout on mobile, cart drawer, footer on small,
+          hero text centering, touch targets min 44px.
+   ============================================================ */
+
+/* ── 1280px — Wide Contained ─────────────────────────────── */
+@media (max-width: 1280px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero-title    { font-size: clamp(64px, 9vw, 120px); }
+}
+
+/* ── 1024px — Tablet Landscape ───────────────────────────── */
+@media (max-width: 1024px) {
+  :root { --section-pad: 80px; }
+
+  .container { padding: 0 32px; }
+
+  /* Navbar */
+  .navbar        { padding: 20px 32px; }
+  .navbar.scrolled { padding: 14px 32px; }
+  .nav-links     { gap: 22px; }
+  .nav-links a   { font-size: 11px; }
+
+  /* Hero */
+  .hero-content  {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 120px 32px 80px;
+  }
+  .hero-title    { font-size: clamp(54px, 8vw, 96px); }
+
+  /* About intro */
+  .about-intro-grid { gap: 52px; }
+  .about-intro-image img { height: 480px; }
+
+  /* Products */
+  .products-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+  /* Founder */
+  .founder-grid { gap: 52px; }
+  .founder-image-frame img { height: 500px; }
+
+  /* Process */
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+
+  /* Why */
+  .why-grid { gap: 52px; }
+  .why-visual-mosaic { height: 460px; }
+
+  /* Reviews */
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Events */
+  .event-item { padding: 32px 32px; }
+
+  /* Gallery */
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Shop */
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Blog */
+  .blog-featured { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .blog-grid     { grid-template-columns: repeat(2, 1fr); }
+
+  /* Ingredients */
+  .ingredient-grid  { grid-template-columns: repeat(3, 1fr); }
+  .flavor-panel.active { grid-template-columns: 1fr 1fr; gap: 48px; }
+
+  /* Reviews page */
+  .reviews-page-grid   { grid-template-columns: repeat(2, 1fr); }
+  .featured-review     { grid-column: 1 / -1; }
+  .reviews-hero-stats  { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contact */
+  .contact-layout { gap: 52px; }
+
+  /* Checkout */
+  .checkout-layout     { grid-template-columns: 1fr 360px; gap: 40px; }
+
+  /* Cart Page */
+  .cart-page-layout    { grid-template-columns: 1fr 300px; gap: 36px; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; }
+
+  /* Partner */
+  .partner-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Values */
+  .values-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Cert */
+  .cert-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Dont */
+  .dont-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Also love */
+  .also-love-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ── 900px — Tablet Portrait Edge ────────────────────────── */
+@media (max-width: 900px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid     { grid-template-columns: repeat(2, 1fr); }
+  .dont-grid     { grid-template-columns: repeat(4, 1fr); }
+
+  /* Product detail alternating layout — always stacked */
+  .product-detail         { grid-template-columns: 1fr; gap: 40px; }
+  .product-detail:nth-child(even) { direction: ltr; }
+  .product-detail-img     { height: 360px; }
+}
+
+/* ── 768px — Mobile ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root { --section-pad: 60px; }
+
+  /* Disable cursor */
+  body { cursor: auto; }
+  .cursor, .cursor-follower { display: none !important; }
+
+  /* Container */
+  .container { padding: 0 20px; }
+
+  /* Navbar */
+  .navbar        { padding: 14px 20px; }
+  .navbar.scrolled { padding: 12px 20px; }
+  .nav-links     { display: none !important; }
+  .nav-toggle    { display: flex !important; }
+
+  /* Mobile menu — better touch targets */
+  .mobile-menu a {
+    font-size: clamp(28px, 7vw, 44px);
+    padding: 14px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hero — stacked */
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 96px 20px 72px;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero-visual   { order: -1; height: 300px; max-height: 300px; }
+  .hero-title    { font-size: clamp(52px, 15vw, 84px); text-align: center; }
+  .hero-estd     { justify-content: center; }
+  .hero-quote    { text-align: left; border-left-width: 2px; }
+  .hero-actions  { justify-content: center; flex-wrap: wrap; }
+  .hero-actions .btn { flex: 1 1 160px; justify-content: center; max-width: 220px; }
+  .hero-bottle-main img   { width: clamp(140px, 38vw, 200px); }
+  .hero-bottle-accent     { display: none; }
+  .hero-glow     { width: 200px; height: 200px; }
+  .hero-scroll-indicator  { display: none; } /* too cramped on mobile */
+
+  /* Brand strip */
+  .brand-strip-item { font-size: 10px; gap: 10px; }
+
+  /* About intro */
+  .about-intro-grid   { grid-template-columns: 1fr; gap: 36px; }
+  .about-intro-image img { height: 340px; }
+  .about-intro-image::before { display: none; }
+  .about-intro-badge  { width: 72px; height: 72px; bottom: -16px; right: -8px; }
+
+  /* Products */
+  .products-grid  { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .product-card   { padding: 20px 14px; }
+  .product-card .btn { opacity: 1; transform: none; }
+  .product-card-image { height: 150px; }
+  .product-card-image img { height: 130px; }
+  .product-card-name { font-size: 17px; }
+
+  /* Founder */
+  .founder-grid   { grid-template-columns: 1fr; gap: 36px; }
+  .founder-image-frame img { height: 380px; }
+  .founder-pull-quote { font-size: clamp(18px, 4.5vw, 26px); }
+
+  /* Process */
+  .process-steps  { grid-template-columns: 1fr 1fr; }
+  .process-step   { padding: 32px 16px; }
+  .process-number { font-size: 52px; }
+  .process-step-title { font-size: 18px; }
+
+  /* Why */
+  .why-grid       { grid-template-columns: 1fr; gap: 40px; }
+  .why-visual     { display: none; } /* mosaic takes too much space on mobile */
+
+  /* Reviews homepage */
+  .reviews-grid   { grid-template-columns: 1fr; }
+
+  /* Events */
+  .event-item {
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+  .event-tag      { display: none; }
+  .event-date-day { font-size: 36px; }
+  .event-title    { font-size: 18px !important; }
+  .event-desc     { display: none; }
+
+  /* Gallery */
+  .gallery-grid   { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .gallery-overlay { display: none; } /* hover overlay irrelevant on touch */
+
+  /* Newsletter */
+  .newsletter-form { flex-direction: column; gap: 0; }
+  .newsletter-form input {
+    border-right: 1.5px solid rgba(92, 61, 30, 0.25);
+    border-bottom: none;
+  }
+  .newsletter-form .btn { width: 100%; justify-content: center; }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .footer-brand   { grid-column: 1 / -1; }
+  .footer-bottom  { flex-direction: column; gap: 8px; text-align: center; }
+  .footer-brand p { max-width: 100%; }
+
+  /* Page hero */
+  .page-hero      { height: 35vh; min-height: 260px; padding-bottom: 36px; }
+  .page-hero-content .headline-xl { font-size: clamp(40px, 12vw, 70px); }
+
+  /* Shop */
+  .shop-grid      { grid-template-columns: 1fr; }
+  .pack-deal      { grid-template-columns: 1fr; gap: 20px; }
+  .pack-deal-price { text-align: left; }
+
+  /* Checkout */
+  .checkout-layout { grid-template-columns: 1fr; gap: 32px; }
+  .checkout-summary { position: static; }
+  .form-row        { grid-template-columns: 1fr; }
+  .payment-icons   { gap: 6px; }
+
+  /* Cart page */
+  .cart-page-layout  { grid-template-columns: 1fr; gap: 28px; }
+  .cart-page-summary { order: -1; } /* summary first on mobile */
+  .cart-page-table th:nth-child(2),
+  .cart-page-table td:nth-child(2) { display: none; } /* hide unit price col */
+
+  /* Cart drawer */
+  .cart-drawer    { width: 100vw; max-width: 100vw; }
+
+  /* Blog */
+  .blog-featured  { grid-template-columns: 1fr; gap: 28px; }
+  .blog-featured-img { height: 260px; }
+  .blog-featured-title { font-size: clamp(22px, 5vw, 32px); }
+  .blog-grid      { grid-template-columns: 1fr; }
+
+  /* Ingredients */
+  .ingredient-grid  { grid-template-columns: 1fr; }
+  .flavor-panel.active { grid-template-columns: 1fr; gap: 32px; }
+  .flavor-panel-img { height: 260px; }
+  .flavor-tab-nav   { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .flavor-tab-btn   { flex-shrink: 0; }
+  .dont-grid        { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid        { grid-template-columns: repeat(2, 1fr); }
+
+  /* Reviews page */
+  .reviews-hero-stats { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .stat-number        { font-size: 40px; }
+  .featured-review    { padding: 28px 20px; gap: 28px; }
+  .featured-review-img { display: none; }
+  .reviews-page-grid  { grid-template-columns: 1fr; }
+  .featured-review    { grid-column: 1 / -1; }
+
+  /* FAQ */
+  .faq-list         { margin-top: 40px; }
+  .faq-question h3  { font-size: 16px; padding-right: 12px; }
+  .faq-icon         { width: 28px; height: 28px; font-size: 16px; flex-shrink: 0; }
+
+  /* Contact */
+  .contact-layout   { grid-template-columns: 1fr; gap: 40px; }
+  .contact-info h2  { font-size: clamp(28px, 7vw, 44px); }
+  .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; }
+
+  /* About timeline */
+  .timeline         { padding-left: 32px; }
+  .timeline-dot     { left: -40px; }
+  .timeline-title   { font-size: 20px; }
+
+  /* Values / Partner */
+  .values-grid  { grid-template-columns: 1fr; }
+  .partner-grid { grid-template-columns: 1fr; }
+
+  /* Also love */
+  .also-love-grid   { grid-template-columns: repeat(2, 1fr); }
+
+  /* Events page */
+  .event-card       { grid-template-columns: 72px 1fr; gap: 16px; }
+  .event-actions    { display: none; }
+  .event-day-num    { font-size: 40px; }
+
+  /* Headline scale */
+  .headline-xl { font-size: clamp(38px, 11vw, 68px); }
+  .headline-lg { font-size: clamp(28px, 7.5vw, 50px); }
+  .headline-md { font-size: clamp(22px, 5vw, 36px); }
+}
+
+/* ── 480px — Small Mobile ────────────────────────────────── */
+@media (max-width: 480px) {
+  :root { --section-pad: 48px; }
+
+  .container { padding: 0 16px; }
+
+  /* Hero */
+  .hero-title  { font-size: clamp(46px, 14vw, 68px); }
+  .hero-content { padding: 88px 16px 64px; }
+  .hero-actions .btn { flex: 1 1 100%; max-width: 100%; }
+
+  /* Products — single col */
+  .products-grid { grid-template-columns: 1fr; gap: 12px; }
+  .product-card-image img { height: 160px; }
+
+  /* Process — single col */
+  .process-steps { grid-template-columns: 1fr; }
+  .process-step  { padding: 28px 16px; }
+
+  /* Gallery — 2 col tight */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 4px; }
+
+  /* Footer — single col */
+  .footer-top { grid-template-columns: 1fr; }
+
+  /* Cart table — hide qty col on tiny screens */
+  .cart-page-table th:nth-child(3),
+  .cart-page-table td:nth-child(3) { display: none; }
+
+  /* Reviews stats — 2 col */
+  .reviews-hero-stats { grid-template-columns: 1fr 1fr; }
+
+  /* Buttons — slightly smaller */
+  .btn { padding: 13px 22px; font-size: 11px; }
+
+  /* FAQ */
+  .faq-question h3 { font-size: 15px; }
+
+  /* Don't use grid for contact form on tiny screens */
+  .contact-form .form-row { grid-template-columns: 1fr; }
+
+  /* Checkout payment options */
+  .payment-option label { font-size: 13px; }
+
+  /* Section headers */
+  .section-header { margin-bottom: 40px; }
+
+  /* Newsletter */
+  .newsletter-inner { padding: 0 4px; }
+
+  /* Also love — single col */
+  .also-love-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  /* Dont grid */
+  .dont-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 360px — Smallest Supported ─────────────────────────── */
+@media (max-width: 360px) {
+  .container { padding: 0 14px; }
+  .hero-title { font-size: 42px; }
+  .headline-lg { font-size: 26px; }
+
+  .products-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .also-love-grid { grid-template-columns: 1fr; }
+
+  .navbar .nav-logo-text { display: none; } /* just show logo icon on tiny phones */
+}
+
+/* ── Touch Device Overrides ──────────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  /* All hover states that need to be always-on for touch */
+  .product-card .btn       { opacity: 1; transform: none; }
+  .product-card:hover      { transform: none; }
+  .shop-card:hover         { transform: none; box-shadow: none; }
+  .hover-lift:hover        { transform: none; box-shadow: none; }
+
+  /* Increase tap targets */
+  .qty-btn       { min-width: 44px; min-height: 44px; }
+  .cart-close    { min-width: 44px; min-height: 44px; }
+  .nav-toggle    { min-width: 44px; min-height: 44px; }
+  .footer-social { min-width: 44px; min-height: 44px; }
+  .faq-question  { min-height: 44px; }
+
+  /* Disable 3D tilt on touch (handled in JS too) */
+  .product-card, .shop-card {
+    transform: none !important;
+  }
+
+  /* Disable magnetic button offset */
+  .magnetic { transform: none !important; }
+}
+
+/* ── Print ───────────────────────────────────────────────── */
+@media print {
+  .navbar,
+  .grain-overlay,
+  .cursor,
+  .cursor-follower,
+  #loader,
+  #scroll-progress,
+  #page-wipe,
+  .site-footer,
+  .cart-overlay,
+  .cart-drawer,
+  .mobile-menu,
+  .brand-strip,
+  .toast {
+    display: none !important;
+  }
+
+  body   { background: white; color: #1C1008; }
+  a      { color: #3B2410; text-decoration: underline; }
+  h1, h2, h3 { page-break-after: avoid; }
+  img    { max-width: 100%; }
+  .container { max-width: 100%; padding: 0 16px; }
+
+  /* Show all sections expanded */
+  .faq-answer { max-height: none !important; }
+  .faq-answer p { padding-bottom: 12px; }
+}
+

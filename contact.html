@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — REBREW</title>
+  <meta name="description" content="Get in touch with ReBrew. Partner with us, place bulk orders, or just say hello.">
+  <link rel="icon" type="image/png" href="assets/logos/rebrew-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="scroll-progress"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" aria-hidden="true"></div>
+<div id="loader"><img src="assets/logos/rebrew-logo.png" alt="ReBrew" class="loader-logo"><p class="loader-text">Say Hello</p><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header"><h2>Your Cart</h2><button class="cart-close" aria-label="Close cart">✕</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer"><div class="cart-total"><span>Total</span><strong>₹0</strong></div><a href="checkout.html" class="btn btn-primary" style="width:100%;justify-content:center;">Checkout</a></div>
+</aside>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><span class="nav-logo-text">REBREW</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li><li><a href="shop.html">Shop</a></li><li><a href="events.html">Events</a></li><li><a href="blog.html">Journal</a></li><li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="#" class="nav-cart-btn" data-open-cart>Cart <span class="cart-count" aria-live="polite" style="display:none">0</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-menu-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="shop.html">Shop</a>
+  <a href="events.html">Events</a>
+  <a href="blog.html">Journal</a>
+  <a href="contact.html" class="active" aria-current="page">Contact</a>
+  <a href="cart.html">Cart</a>
+</div>
+
+<section class="page-hero">
+  <div class="container"><div class="page-hero-content">
+    <p class="eyebrow" style="color:var(--dusty-gold);margin-bottom:12px">We're Listening</p>
+    <h1 class="headline-xl" style="color:var(--cream)">Say<br>Hello.</h1>
+    <p style="font-family:var(--font-fell);font-style:italic;color:rgba(245,237,214,0.5);font-size:18px;margin-top:12px">"A small team that actually replies."</p>
+  </div></div>
+</section>
+
+<section class="contact-page bg-cream">
+  <div class="container">
+    <div class="contact-layout">
+      <!-- Contact Info -->
+      <div class="contact-info reveal-left">
+        <h2>Let's Build<br>Something Together.</h2>
+        <p>Whether you want to stock ReBrew at your café, place a bulk order, collaborate on an event, or just want to share feedback — we'd love to hear from you.</p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <h4>Location</h4>
+              <p>Coimbatore, Tamil Nadu, India</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <h4>Phone / WhatsApp</h4>
+              <p><a href="tel:+918438817294" style="color:var(--dark-brown);text-decoration:none;">+91 84388 17294</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📧</div>
+            <div class="contact-detail-text">
+              <h4>Email</h4>
+              <p><a href="mailto:hello.rebrew@gmail.comn" style="color:var(--dark-brown);text-decoration:none;">hello.rebrew@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📱</div>
+            <div class="contact-detail-text">
+              <h4>Instagram</h4>
+              <p><a href="#" style="color:var(--dark-brown);text-decoration:none;">@re_brew</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px;padding:28px;background:var(--aged-paper);border-left:3px solid var(--dusty-gold);">
+          <p class="eyebrow" style="margin-bottom:10px">Response Time</p>
+          <p style="font-family:var(--font-baskerville);font-style:italic;font-size:15px;color:var(--vintage-brown);line-height:1.7;">We respond to all enquiries within <strong style="color:var(--dark-brown)">24 hours</strong>, Monday to Saturday. For urgent queries, WhatsApp is the fastest way to reach us.</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="reveal">
+        <form class="contact-form contact-form-el" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group">
+              <label for="c-name">Your Name</label>
+              <input type="text" id="c-name" placeholder="Arjun Kumar" required>
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone</label>
+              <input type="tel" id="c-phone" placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email Address</label>
+            <input type="email" id="c-email" placeholder="hello@yourdomain.com" required>
+          </div>
+          <div class="form-group">
+            <label for="c-type">Enquiry Type</label>
+            <select id="c-type">
+              <option value="">Select a topic</option>
+              <option>General Enquiry</option>
+              <option>Wholesale / Trade Partnership</option>
+              <option>Café / Restaurant Stocking</option>
+              <option>Event Collaboration</option>
+              <option>Press / Media</option>
+              <option>Investor Relations</option>
+              <option>Order Issue / Returns</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c-org">Organisation / Café Name (Optional)</label>
+            <input type="text" id="c-org" placeholder="Your Café, Restaurant or Company">
+          </div>
+          <div class="form-group">
+            <label for="c-msg">Message</label>
+            <textarea id="c-msg" rows="5" placeholder="Tell us what you have in mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:13px;padding:16px;">
+            Send Message →
+          </button>
+          <p style="font-family:var(--font-body);font-size:11px;color:rgba(92,61,30,0.35);text-align:center;margin-top:12px;">Your details are kept private and never shared.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Map placeholder -->
+    <div class="map-placeholder reveal"></div>
+  </div>
+</section>
+
+<!-- Partner With Us -->
+<section class="partner-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="eyebrow" style="color:rgba(245,237,214,0.4)">Partner With Us</p>
+      <h2 class="headline-lg" style="color:var(--cream)">Bring ReBrew<br>to Your Space.</h2>
+    </div>
+    <div class="partner-grid stagger-children">
+      <div class="partner-card">
+        <div class="partner-icon">☕</div>
+        <h3>Cafés &amp; Restaurants</h3>
+        <p>Stock ReBrew as a premium beverage option. We provide point-of-sale support, competitive pricing, and regular supply with consistent quality.</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-icon">🛒</div>
+        <h3>Retail Stores</h3>
+        <p>List ReBrew in your store. We're actively expanding our retail presence across South India. Get in touch to become a stockist.</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-icon">🎪</div>
+        <h3>Events &amp; Pop-Ups</h3>
+        <p>Looking for a premium beverage partner for your event? ReBrew is available for festivals, markets, corporate events, and brand activations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="#" class="footer-social">Ig</a><a href="#" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="tel:+918438817294">+91 84388 17294</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
+
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
+</body>
+</html>
