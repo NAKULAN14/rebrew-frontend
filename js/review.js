@@ -227,7 +227,7 @@ card.innerHTML = `
 <h4>${review.title}</h4>
 <p> ${review.review}</p>
 <div class="review-author">
-    Test
+     <div class="review-avatar">N</div>
 </div>
 
 `;
