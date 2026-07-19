@@ -201,11 +201,39 @@ async function loadReviews() {
 
 }
 function renderReviews(reviews) {
-    reviewContainer.innerHTML = `
-        <div style="background:red;color:white;padding:20px;font-size:20px;">
-            TEST ${reviews.length}
-        </div>
-    `;
+
+    reviewContainer.innerHTML = "";
+
+    reviews.forEach(review => {
+
+        const card = document.createElement("div");
+        card.className = "review-card reveal";
+
+        card.innerHTML = `
+            <div class="review-stars">${"★".repeat(Number(review.rating || 5))}</div>
+
+            <h4 class="review-title">${review.title || ""}</h4>
+
+            <p class="review-text">${review.review || ""}</p>
+
+            <div class="review-author">
+
+                <div class="review-avatar">
+                    ${(review.name || "?").charAt(0).toUpperCase()}
+                </div>
+
+                <div class="review-author-info">
+                    <h5>${review.name || "Anonymous"}</h5>
+                    <span>${review.city || ""}</span>
+                </div>
+
+            </div>
+        `;
+
+        reviewContainer.appendChild(card);
+
+    });
+
 }
 function updateReviewStats(reviews) {
 
