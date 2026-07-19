@@ -217,7 +217,9 @@ function renderReviews(reviews) {
         card.style.padding = "20px";
         card.style.marginBottom = "20px";
 
-        card.textContent = review.name;
+        card.innerHTML = `
+        <h4>${review.name}</h4>
+        `;
 
         reviewContainer.appendChild(card);
 
