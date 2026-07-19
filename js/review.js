@@ -202,37 +202,30 @@ async function loadReviews() {
 }
 function renderReviews(reviews) {
 
+    console.log("renderReviews START");
+
     reviewContainer.innerHTML = "";
 
-    reviews.forEach(review => {
+    reviews.forEach((review, index) => {
+
+        console.log("Rendering review", index);
 
         const card = document.createElement("div");
-        card.className = "review-card";
 
-        card.innerHTML = `
-            <div class="review-stars">${"★".repeat(Number(review.rating || 5))}</div>
+        card.style.background = "red";
+        card.style.color = "white";
+        card.style.padding = "20px";
+        card.style.marginBottom = "20px";
 
-            <h4 class="review-title">${review.title || ""}</h4>
-
-            <p class="review-text">${review.review || ""}</p>
-
-            <div class="review-author">
-
-                <div class="review-avatar">
-                    ${(review.name || "?").charAt(0).toUpperCase()}
-                </div>
-
-                <div class="review-author-info">
-                    <h5>${review.name || "Anonymous"}</h5>
-                    <span>${review.city || ""}</span>
-                </div>
-
-            </div>
-        `;
+        card.textContent = review.name;
 
         reviewContainer.appendChild(card);
 
+        console.log("Card appended");
+
     });
+
+    console.log("Final HTML:", reviewContainer.innerHTML);
 
 }
 console.log(reviewContainer.innerHTML);
