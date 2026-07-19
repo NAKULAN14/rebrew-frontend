@@ -222,6 +222,10 @@ function renderReviews(reviews) {
 card.innerHTML = `
 <h4>${review.name}</h4>
 `;
+card.innerHTML = `
+<div class="review-stars">★★★★★</div>
+<h4>${review.title}</h4>
+`;
 
         reviewContainer.appendChild(card);
 
