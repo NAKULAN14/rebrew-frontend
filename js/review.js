@@ -179,6 +179,7 @@ async function loadReviews() {
         }
 
         const reviews = result.data || [];
+        console.log("Reviews array:", reviews);
         console.log(result);
         console.log(reviews);
 
@@ -200,6 +201,8 @@ async function loadReviews() {
 
 }
 function renderReviews(reviews) {
+    console.log("renderReviews called", reviews);
+
 
     if (!reviews.length) {
 
