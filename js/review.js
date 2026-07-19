@@ -226,6 +226,10 @@ card.innerHTML = `
 <div class="review-stars">★★★★★</div>
 <h4>${review.title}</h4>
 <p> ${review.review}</p>
+<div class="review-author">
+    Test
+</div>
+
 `;
 
 
