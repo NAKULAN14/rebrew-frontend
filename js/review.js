@@ -134,7 +134,7 @@ async function submitReview(e) {
         }
 
         showMessage(
-            "Thank you! Your review has been submitted for approval."
+            "Thank you! Your review has been published."
         );
 
         reviewForm.reset();
