@@ -226,7 +226,7 @@ card.innerHTML = `
 <div class="review-stars">★★★★★</div>
 <h4>${review.title}</h4>
 `;
-<p>${review.review}</p>
+<p> ${review.review}</p>
 
 
         reviewContainer.appendChild(card);
