@@ -207,7 +207,7 @@ function renderReviews(reviews) {
     reviews.forEach(review => {
 
         const card = document.createElement("div");
-        card.className = "review-card reveal";
+        card.className = "review-card";
 
         card.innerHTML = `
             <div class="review-stars">${"★".repeat(Number(review.rating || 5))}</div>
