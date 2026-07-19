@@ -179,6 +179,8 @@ async function loadReviews() {
         }
 
         const reviews = result.data || [];
+        console.log(result);
+        console.log(reviews);
 
         renderReviews(reviews);
 
