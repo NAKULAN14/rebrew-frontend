@@ -235,25 +235,18 @@ function renderReviews(reviews) {
         ${review.review}
     </p>
 
-    <div class="review-footer">
+    <div class="review-author">
 
-        <div class="review-avatar">
-            ${avatar}
-        </div>
-
-        <div>
-
-            <strong>${review.name}</strong>
-
-            <br>
-
-            <small>
-                ${review.city || ""}
-            </small>
-
-        </div>
-
+    <div class="review-avatar">
+        ${avatar}
     </div>
+
+    <div class="review-author-info">
+        <h5>${review.name}</h5>
+        <span>${review.city || ""}</span>
+    </div>
+
+</div>
 
 </div>
 
