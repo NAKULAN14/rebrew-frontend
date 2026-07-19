@@ -178,7 +178,7 @@ async function loadReviews() {
             throw new Error(result.message || "Failed to load reviews.");
         }
 
-        const reviews = result.data?.reviews || [];
+        const reviews = result.data || [];
 
         renderReviews(reviews);
 
