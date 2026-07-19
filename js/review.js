@@ -201,64 +201,11 @@ async function loadReviews() {
 
 }
 function renderReviews(reviews) {
-    console.log("renderReviews called", reviews);
-
-
-    if (!reviews.length) {
-
-        reviewContainer.innerHTML = `
-            <div class="empty-reviews">
-                No reviews yet.
-                Be the first to share your experience!
-            </div>
-        `;
-
-        return;
-
-    }
-
-    reviewContainer.innerHTML = reviews.map(review => {
-
-        const stars = "★".repeat(review.rating);
-
-        const avatar =
-            review.name?.charAt(0)?.toUpperCase() || "?";
-
-        return `
-
-<div class="review-card reveal">
-
-    <div class="review-stars">
-        ${stars}
-    </div>
-
-    <h4 class="review-title">
-        ${review.title || ""}
-    </h4>
-
-    <p class="review-text">
-        ${review.review}
-    </p>
-
-    <div class="review-author">
-
-    <div class="review-avatar">
-        ${avatar}
-    </div>
-
-    <div class="review-author-info">
-        <h5>${review.name}</h5>
-        <span>${review.city || ""}</span>
-    </div>
-
-</div>
-
-</div>
-
-`;
-
-    }).join("");
-
+    reviewContainer.innerHTML = `
+        <div style="background:red;color:white;padding:20px;font-size:20px;">
+            TEST ${reviews.length}
+        </div>
+    `;
 }
 function updateReviewStats(reviews) {
 
