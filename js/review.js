@@ -207,7 +207,7 @@ function renderReviews(reviews) {
     reviews.forEach(review => {
 
         const card = document.createElement("div");
-        card.className = "review-card reveal";
+        card.className = "review-card";
 
         const stars = "★".repeat(Number(review.rating || 5));
         const avatar = (review.name || "?").charAt(0).toUpperCase();

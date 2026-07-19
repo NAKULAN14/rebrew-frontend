@@ -3823,3 +3823,27 @@ section {
   color: var(--dark-brown);
 }
 
+/* ============================================================
+   REVIEWS PAGE CARD OVERRIDES
+   ============================================================ */
+
+.reviews-page-grid .review-card {
+    background: #ffffff;
+    border: 1px solid rgba(92, 61, 30, 0.12);
+}
+
+.reviews-page-grid .review-title {
+    color: var(--dark-brown);
+}
+
+.reviews-page-grid .review-text {
+    color: var(--vintage-brown);
+}
+
+.reviews-page-grid .review-author-info h5 {
+    color: var(--dark-brown);
+}
+
+.reviews-page-grid .review-author-info span {
+    color: var(--vintage-brown);
+}
