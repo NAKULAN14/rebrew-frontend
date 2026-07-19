@@ -220,16 +220,20 @@ function renderReviews(reviews) {
         card.className = "review-card";
 
 card.innerHTML = `
-<h4>${review.name}</h4>
-`;
-card.innerHTML = `
 <div class="review-stars">★★★★★</div>
-<h4>${review.title}</h4>
-<p> ${review.review}</p>
-<div class="review-author">
-     <div class="review-avatar">N</div>
-</div>
 
+<h4>${review.title}</h4>
+
+<p>${review.review}</p>
+
+<div class="review-author">
+    <div class="review-avatar">N</div>
+
+    <div class="review-author-info">
+        <h5>${review.name}</h5>
+        <span>${review.city}</span>
+    </div>
+</div>
 `;
 
 
