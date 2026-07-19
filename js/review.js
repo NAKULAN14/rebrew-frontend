@@ -202,51 +202,39 @@ async function loadReviews() {
 }
 function renderReviews(reviews) {
 
-    console.log("renderReviews START");
-
     reviewContainer.innerHTML = "";
 
-    reviews.forEach((review, index) => {
-
-        console.log("Rendering review", index);
+    reviews.forEach(review => {
 
         const card = document.createElement("div");
+        card.className = "review-card reveal";
 
-        card.style.background = "red";
-        card.style.color = "white";
-        card.style.padding = "20px";
-        card.style.marginBottom = "20px";
+        const stars = "★".repeat(Number(review.rating || 5));
+        const avatar = (review.name || "?").charAt(0).toUpperCase();
 
-        card.className = "review-card";
+        card.innerHTML = `
+            <div class="review-stars">${stars}</div>
 
-card.innerHTML = `
-<div class="review-stars">★★★★★</div>
+            <h4 class="review-title">${review.title || ""}</h4>
 
-<h4>${review.title}</h4>
+            <p class="review-text">${review.review || ""}</p>
 
-<p>${review.review}</p>
+            <div class="review-author">
+                <div class="review-avatar">${avatar}</div>
 
-<div class="review-author">
-    <div class="review-avatar">N</div>
-
-    <div class="review-author-info">
-        <h5>${review.name}</h5>
-        <span>${review.city}</span>
-    </div>
-</div>
-`;
-
-
+                <div class="review-author-info">
+                    <h5>${review.name || "Anonymous"}</h5>
+                    <span>${review.city || ""}</span>
+                </div>
+            </div>
+        `;
 
         reviewContainer.appendChild(card);
 
-        console.log("Card appended");
-
     });
 
-    console.log("Final HTML:", reviewContainer.innerHTML);
-
 }
+
 console.log(reviewContainer.innerHTML);
 function updateReviewStats(reviews) {
 
