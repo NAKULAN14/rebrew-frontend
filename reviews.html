@@ -89,50 +89,10 @@
       </div>
 
       <!-- Regular Reviews -->
-      <div class="review-card reveal" style="background:var(--cream);">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="review-text">"We stocked ReBrew at our café and it became an instant hit. The Apple & Cinnamon is something our customers now specifically ask for."</p>
-        <div class="review-author"><div class="review-avatar">R</div><div class="review-author-info"><h5>Ravi Kumar</h5><span>Café Owner · Coimbatore</span></div></div>
-      </div>
-
-      <div class="review-card reveal" style="background:var(--cream);">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="review-text">"As someone who doesn't drink alcohol, ReBrew has completely changed how I enjoy social moments. I feel like I'm drinking something premium and special."</p>
-        <div class="review-author"><div class="review-avatar">P</div><div class="review-author-info"><h5>Priya Menon</h5><span>Regular Customer · Bangalore</span></div></div>
-      </div>
-
-      <div class="review-card reveal" style="background:var(--cream);">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="review-text">"I tried the Pineapple at a market and immediately bought 6 bottles. It's light, tropical, and you can taste that it's been made with care. Nothing like it."</p>
-        <div class="review-author"><div class="review-avatar">S</div><div class="review-author-info"><h5>Sneha Pillai</h5><span>Event Coordinator · Kochi</span></div></div>
-      </div>
-
-      <div class="review-card reveal" style="background:var(--cream);">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="review-text">"The packaging is beautiful and the product matches. Grape is my go-to. Rich, slightly tart, complex in a way that grows on you with every sip."</p>
-        <div class="review-author"><div class="review-avatar">V</div><div class="review-author-info"><h5>Vikram Nair</h5><span>Designer · Bangalore</span></div></div>
-      </div>
-
-      <div class="review-card reveal" style="background:var(--cream);">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="review-text">"Finally something that doesn't feel like a compromise. I gave up alcohol two years ago and ReBrew is the first drink that actually makes me feel like I'm not missing out."</p>
-        <div class="review-author"><div class="review-avatar">D</div><div class="review-author-info"><h5>Deepika R.</h5><span>Yoga Teacher · Chennai</span></div></div>
-      </div>
-
-      <div class="review-card reveal" style="background:var(--cream);">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>
-        <p class="review-text">"Mint is refreshing to a level I didn't expect. Very clean, very alive. Docking one star only because I wish it came in 500ml too. Otherwise perfect."</p>
-        <div class="review-author"><div class="review-avatar">K</div><div class="review-author-info"><h5>Karan Shah</h5><span>Entrepreneur · Mumbai</span></div></div>
-      </div>
-
-      <div class="review-card reveal" style="background:var(--cream);">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="review-text">"Ordered a mixed pack online. Delivery was fast and secure. All bottles arrived perfectly. The Ginger one was mind-blowing. Will be a repeat customer."</p>
-        <div class="review-author"><div class="review-avatar">M</div><div class="review-author-info"><h5>Meera Krishnan</h5><span>Online Customer · Hyderabad</span></div></div>
-      </div>
-
+  
     </div>
   </div>
+  <div id="reviews-container"></div>
 </section>
 
 <!-- Write a Review -->
@@ -151,18 +111,64 @@
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <div><p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">Your Name</p><input type="text" placeholder="Your name" required></div>
+          <div><p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">Your Name</p><input
+    id="review-name"
+    name="name"
+    type="text"
+    placeholder="Your name"
+    required
+          ></div>
+          <div><p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">
+        Email
+    </p>
+
+    <input
+        id="review-email"
+        name="email"
+        type="email"
+        placeholder="Your email"
+        required
+    >
+</div>
+          <div>
+    <p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">
+        City
+    </p>
+
+    <input
+        id="review-city"
+        name="city"
+        type="text"
+        placeholder="City"
+    >
+</div>
+
           <div><p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">Favourite Flavour</p>
-            <select style="width:100%;padding:14px 18px;border:1.5px solid rgba(92,61,30,0.18);background:var(--aged-paper);font-family:var(--font-body);font-size:14px;color:var(--dark-brown);outline:none;appearance:none;">
-              <option>Grape</option><option>Apple & Cinnamon</option><option>Ginger</option><option>Pineapple</option><option>Mint</option>
+            <select id="favorite-flavor"
+    name="favoriteFlavor"style="width:100%;padding:14px 18px;border:1.5px solid rgba(92,61,30,0.18);background:var(--aged-paper);font-family:var(--font-body);font-size:14px;color:var(--dark-brown);outline:none;appearance:none;">
+              <option value="grape">Grape</option><option value="apple_cinnamon">Apple & Cinnamon</option><option value="ginger">Ginger</option><option value="pineapple">Pineapple</option><option value="mint">Mint</option>
             </select>
           </div>
         </div>
         <div style="margin-top:4px;">
           <p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">Your Story</p>
-          <textarea rows="5" placeholder="Tell us about your ReBrew experience..." required></textarea>
+          <div>
+    <p style="font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vintage-brown);margin-bottom:8px;">
+        Review Title
+    </p>
+
+    <input
+        id="review-title"
+        name="title"
+        type="text"
+        maxlength="120"
+        placeholder="Amazing Experience"
+    >
+          </div>
+          <textarea id="review-text" name="review" rows="5" placeholder="Tell us about your ReBrew experience..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Review →</button>
+        <div id="review-message"></div>
+        <button id="submit-review-btn" type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Review →</button>
       </form>
     </div>
   </div>
@@ -170,28 +176,10 @@
 
 <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><img src="assets/logos/rebrew-logo.png" alt="ReBrew"><p>"Brewed once. Born again."</p><div class="footer-socials"><a href="https://www.instagram.com/re__brew?igsh=MXVpNTBldjRtdmx2dA%3D%3D&utm_source=qr" class="footer-social">Ig</a><a href="https://wa.me/8438817294" class="footer-social">Wa</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">Story</a></li><li><a href="products.html">Products</a></li></ul></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Brews</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 ReBrew. Coimbatore, India.</p></div></div></footer>
 
-<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/cart.js"></script>
-<script>
-// Star selector
-let selectedStars = 5;
-const stars = document.querySelectorAll('.star-selector span');
-stars.forEach((star, i) => {
-  star.addEventListener('click', () => {
-    selectedStars = i + 1;
-    stars.forEach((s, j) => s.classList.toggle('active', j <= i));
-  });
-  star.addEventListener('mouseenter', () => stars.forEach((s, j) => s.style.color = j <= i ? 'var(--dusty-gold)' : 'rgba(92,61,30,0.2)'));
-  star.addEventListener('mouseleave', () => stars.forEach((s, j) => s.style.color = j < selectedStars ? 'var(--dusty-gold)' : 'rgba(92,61,30,0.2)'));
-});
-// Init all stars active
-stars.forEach(s => s.classList.add('active'));
-
-document.getElementById('review-form')?.addEventListener('submit', e => {
-  e.preventDefault();
-  window.showToast('✦ Thank you! Your review has been submitted.');
-  e.target.reset();
-  stars.forEach(s => { s.classList.add('active'); s.style.color = ''; });
-});
-</script>
+<script src="js/api.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/reviews.js"></script>
 </body>
 </html>
