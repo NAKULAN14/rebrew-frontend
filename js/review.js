@@ -235,6 +235,7 @@ function renderReviews(reviews) {
     });
 
 }
+console.log(reviewContainer.innerHTML);
 function updateReviewStats(reviews) {
 
     if (!reviews.length) return;
