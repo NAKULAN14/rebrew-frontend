@@ -133,13 +133,12 @@ async function submitReview(e) {
 
         }
 
-        showMessage(
-            "Thank you! Your review has been published."
-        );
+        
 
         reviewForm.reset();
-        loadReviews();
+        await loadReviews();
 
+        showSuccessPopup()
         selectedRating = 5;
 
         initialiseStars();
@@ -265,5 +264,26 @@ document.addEventListener("DOMContentLoaded", () => {
         submitReview
     );
     loadReviews();
+
+});
+function showSuccessPopup(){
+
+    const popup=document.getElementById("review-success-popup");
+
+    popup.classList.add("show");
+
+    setTimeout(()=>{
+        popup.classList.remove("show");
+    },3000);
+
+}
+
+document
+.getElementById("success-close-btn")
+?.addEventListener("click",()=>{
+
+    document
+    .getElementById("review-success-popup")
+    .classList.remove("show");
 
 });

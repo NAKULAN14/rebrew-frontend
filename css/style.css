@@ -3847,3 +3847,126 @@ section {
 .reviews-page-grid .review-author-info span {
     color: var(--vintage-brown);
 }
+.review-success-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(5px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:99999;
+}
+
+.review-success-popup.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.review-success-box{
+
+    background:var(--cream);
+
+    width:340px;
+
+    border-radius:18px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.success-bottle{
+
+    width:120px;
+
+    margin-bottom:20px;
+
+    animation:bottlePop .6s ease;
+}
+
+.review-success-box h2{
+
+    font-size:22px;
+
+    color:var(--dark-brown);
+
+    margin-bottom:12px;
+}
+
+.review-success-box p{
+
+    color:var(--vintage-brown);
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+}
+
+.review-success-box button{
+
+    background:var(--dusty-gold);
+
+    color:var(--dark-brown);
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+.review-success-box button:hover{
+
+    transform:translateY(-2px);
+}
+
+@keyframes bottlePop{
+
+    0%{
+        opacity:0;
+        transform:translateY(60px) scale(.5) rotate(-10deg);
+    }
+
+    60%{
+        opacity:1;
+        transform:translateY(-10px) scale(1.08) rotate(4deg);
+    }
+
+    80%{
+        transform:translateY(5px) scale(.97);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0) scale(1) rotate(0);
+    }
+
+}
+
+@keyframes popupFade{
+
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
+
+}
